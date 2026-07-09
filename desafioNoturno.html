@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Noturno</title>
+
+    <style>
+        :root{
+            --cor-alerta: #ff0033;
+            --fundo-alerta: #fff5f5;
+            --cor-texto: #330000;
+            --cor-alerta-escuro: #ff4d6d;
+            --fundo-alerta-escuro: #1a0508;
+            --cor-texto-escuro: rgb(48, 22, 196);
+        }
+        .alerta-erro {
+            background-color: var(--fundo-alerta);
+            border-left: 5px solid var(--cor-alerta);
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .alerta-erro h3 {
+            color: var(--cor-alerta);
+            margin: 0 0 5px 0;
+        }
+        .alerta-erro p {
+            color: var(--cor-texto);
+            margin: 0;
+        }
+        .dark-theme{
+            background-color: var(--fundo-alerta-escuro);
+            border-left: 5px solid var(--cor-alerta-escuro);
+            padding: 15px;
+            border-radius: 4px;
+        }
+        .dark-theme h3 {
+            color: var(--cor-alerta-escuro);
+            margin: 0 0 5px 0;
+        }
+        .darktheme p {
+            color: var(--cor-texto-escuro);
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="alerta-erro">
+        <h3>Alerta!</h3>
+        <p>Seu computador pode não ter anti-vírus, mas nenhum foi detectado, Mário</p>
+    </div>
+    <div class="dark-theme">
+        <h3>Alerta!</h3>
+        <p>Seu computador pode não ter anti-vírus, mas nenhum foi detectado, Mário</p>
+    </div>
+</body>
+</html>

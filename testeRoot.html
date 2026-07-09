@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste :root</title>
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: 100vh;
+        }
+        :root{
+            --cor-primária: #4f46e5;
+            --cor-fundo: rgb(209, 209, 250);
+            --cor-texto-claro: #ffffff;
+            --cor-texto-escuro: brown;
+            --espacamento-padrao: 20px;
+            --borda-arredondada:12px;
+            --transicao-suave: all 0.3 ease;
+        }
+        .card{
+            background-color: var(--cor-texto-claro);
+            border: 1px solid #e2e8f0;
+            border-radius: var(--borda-arredondada);
+            padding: 24px;
+            max-width: 300px;
+        }
+        .card h2{
+            color: var(--cor-texto-escuro);
+            margin-bottom: 20px;
+        }
+        .btn{
+            border:none;
+            padding: 10px 20px;
+            border-radius: var(--borda-arredondada);
+            cursor: pointer;
+            transition: var(--transicao-suave);
+        }
+        .btn:hover{
+            background-color: var(--cor-fundo);
+            color: var(--cor-primária)
+        }
+        body{
+            background-color: var(--cor-fundo);
+        }
+        button{
+            background-color: var(--cor-primária);
+            padding: var(--espacamento-padrao);
+            margin-top: var(--espacamento-padrao);
+            color: var(--cor-fundo)
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Aprenda CSS3</h2>
+        <p>As variáveis tornam seu código mais limpo e inteligente</p>
+        <button class="btn">Acessar curso</button>
+    </div>    
+</body>
+</html>

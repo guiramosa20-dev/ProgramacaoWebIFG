@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Treinando position</title>
+    <style>
+        div{
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            position: relative
+        }
+        #topo{
+            background-color: greenyellow;
+            position: absolute;
+            top:0px;
+            left:0px;
+            height:50px;
+        }
+        #menu{
+            top:42px;
+            left:0px;
+            position: fixed;
+            
+            background-color: blue;
+        }
+        #conteudo{
+            position: fixed;
+            top:62px;
+            height: 1000px;
+            text-align: center;
+            align-items: center;
+        }
+        #rodape{
+            background-color: greenyellow;
+            position: fixed;
+            bottom:0px;
+            left:0px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body style="width: 100vh;">
+    <div id="topo">Topo</div>
+    <div id="menu">Menu</div>
+    <div id="conteudo">Conteúdo</div>
+    <div id="rodape">Rodapé</div>
+</body>
+</html>

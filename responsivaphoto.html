@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Link na Bio</title>
+  <style>
+    /* Configurações Gerais */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #0f172a;
+      color: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* Container Principal (Mobile e Desktop mantêm a mesma direção) */
+    .bio-container {
+      display: flex;
+      flex-direction: column; /* Perfil sempre em cima, links embaixo */
+      align-items: center;
+      gap: 30px;
+      width: 100%;
+      max-width: 400px; /* Base mobile */
+      text-align: center;
+    }
+
+    /* Seção do Topo/Perfil */
+    .avatar {
+      font-size: 50px;
+      background: #334155;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 30px auto;
+    }
+
+    /* Seção de Links */
+    .links-section {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+    }
+
+    .link-card {
+      background: #1e293b;
+      color: #38bdf8;
+      text-decoration: none;
+      padding: 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      border: 1px solid #334155;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+    }
+
+    .link-card:hover {
+      background: #38bdf8;
+      color: #0f172a;
+      transform: scale(1.02);
+    }
+    img{
+        border-radius: 100%;
+        align-self: auto;
+    }
+    footer{
+        width: 100%;
+        height:100px;
+        color: #334155;
+        background-color: aliceblue;
+        text-align: center;
+        margin-top: 55px;
+        margin-bottom: 0px;
+        position: relative;
+    
+    }
+    @media(min-width: 500px){
+         /* Configurações Gerais */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #0f172a;
+      color: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* Container Principal (Mobile e Desktop mantêm a mesma direção) */
+    .bio-container {
+      display: flex;
+      flex-direction: column; /* Perfil sempre em cima, links embaixo */
+      align-items: center;
+      gap: 30px;
+      width: 100%;
+      max-width: 400px; /* Base mobile */
+      text-align: center;
+    }
+
+    /* Seção do Topo/Perfil */
+    .avatar {
+      font-size: 50px;
+      background: #334155;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 30px auto 30px auto;
+    }
+
+    /* Seção de Links */
+    .links-section {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      flex-direction: row;
+      gap: 15px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .link-card {
+      background: #1e293b;
+      color: #38bdf8;
+      text-decoration: none;
+      padding: 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      border: 1px solid #334155;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      width:400px;
+      height:400px;
+    }
+
+    .link-card:hover {
+      background: #38bdf8;
+      color: #0f172a;
+      transform: scale(1.02);
+    }
+    img{
+        border-radius: 100%;
+        align-self: auto;
+    }
+    footer{
+        width: 100%;
+        height:100px;
+        color: #334155;
+        font-weight: bold;
+        background-color: aliceblue;
+        text-align: center;
+        margin-top: 55px;
+        margin-bottom: 0px;
+    
+    }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bio-container">
+    
+    <header class="profile-section">
+      <div class="avatar"><img src="https://th.bing.com/th/id/OIP.QkLJF-mqM0d-nLAu6_LjOgHaHa?w=184&h=184&c=7&r=0&o=7&pid=1.7&rm=3" alt="" width="150px" height="150px"></div>
+      <h1>Gustavo do Persona</h1>
+      <p>Desenvolvedor Front-End & Designer</p>
+    </header>
+
+    <main class="links-section">
+      <a href="https://th.bing.com/th?q=Juan+Cavalo+Meme+Terraria&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&pid=InlineBlock&rm=3&mkt=pt-BR&cc=BR&setlang=pt-br&adlt=moderate&t=1&mw=247" class="link-card">Meu Portfólio</a>
+      <a href="https://www.bing.com/ck/a?!&&p=ca519c687e3e7b42f952dd2a31fba75278e4cd77bc25d2cec17023c34305021eJmltdHM9MTc4MDI3MjAwMA&ptn=3&ver=2&hsh=4&fclid=3620084d-bc41-6e61-25c9-1f79bd2d6f4d&u=a1L3ZpZGVvcy9yaXZlcnZpZXcvcmVsYXRlZHZpZGVvP3E9cmljaytyb2xsK2xpbmsmJm1pZD0yOThCMjQ2MzhBQjM3OTVFM0FERDI5OEIyNDYzOEFCMzc5NUUzQUREJmNodXJsPWh0dHBzJTNhJTJmJTJmd3d3LnlvdXR1YmUuY29tJTJmY2hhbm5lbCUyZlVDVzFTOVU2Q09HX1dobTJ5ZlJmNzUzZyZGT1JNPVZBTUdaQw" class="link-card">GitHub</a>
+      <a href="#" class="link-card">LinkedIn</a>
+      <a href="https://www.bing.com/ck/a?!&&p=7510aef62fcfd1ea46df996c6517683d79c07ca97fa144df10776a6b82c2ec1eJmltdHM9MTc4MDM1ODQwMA&ptn=3&ver=2&hsh=4&fclid=3620084d-bc41-6e61-25c9-1f79bd2d6f4d&u=a1L3ZpZGVvcy9yaXZlcnZpZXcvcmVsYXRlZHZpZGVvP3E9ZGFuJWMzJWE3YStkbyt3aGF0c2FwcCYmbWlkPTI0MkU4NDY0NjAzOEQ3NDYzNjZBMjQyRTg0NjQ2MDM4RDc0NjM2NkEmY2h1cmw9aHR0cHMlM2ElMmYlMmZ3d3cueW91dHViZS5jb20lMmZjaGFubmVsJTJmVUNCdDRsQXJQYjdUV3JvbU1SLXhWZ3FBJkZPUk09VkFNR1pD" class="link-card">Contato via WhatsApp</a>
+    </main>
+
+  </div>
+  <footer>
+    Não vai adiantar descobrir onde eu moro<br>, por que já sei onde moro
+  </footer>
+</body>
+</html>
+
+<!--
+  No site atual:
+  -> Modifique colocando seu nome e sua foto
+  -> Deixar funcionando com até 500px de largura
+
+Formato Desktop:
+  -> Os botões ficarão quadrados com tamanho:
+400px x 400px
+  -> Duas linhas e duas colunas

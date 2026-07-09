@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*Essa parte estiliza o primeiro formulário e é o padrão para todos sem id ou classe*/
+        #h_form1{
+            font-family: "Times New Roman";
+            font-weight: normal;
+            padding-left:10px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+            text-align: left;
+            text-emphasis: none;
+            font-size: 24px;
+        }
+        #p_form1{
+            font-family: "Times New Roman";
+            padding-left: 10px;
+        }
+        .input_form1{
+            width: 400px;
+            border-radius: 20px;
+            height: 30px;
+            border: 1px solid grey;
+        }
+        #msg_form1{
+            width: 400px;
+            height: 100px;
+            border-radius: 20px;
+            border: 1px solid grey;
+            resize: none;
+        }
+        #submit_form1{
+            width: 30%;
+            padding: 13px;
+            border-radius: 20px;
+            border: none;
+            background-color: darkgrey;
+        }
+        #botao1{
+            text-align: center;
+        }
+        ::placeholder{
+            font-family: Arial;
+            font-size: 14px;
+            padding: 10px; 
+        }
+        .label_form1{
+            font-size: 18px;
+            padding-left:12px;
+        }
+         input[type='text']:hover, input[type='email']:hover, input[type='number']:hover{
+             background-color: lightgrey;
+             box-shadow: 5px 5px 10px grey;
+         }
+         textarea:hover{
+             background-color: lightgrey;
+             box-shadow: 5px 5px 10px grey;
+         }
+          input[type='text']:focus, input[type='email']:focus, input[type='number']:focus{
+             padding-left: 12px;
+             font-family: Arial;
+         }
+        .radio_form1{
+            padding-right: 30px;
+            accent-color: grey;
+        }
+         input[type='radio']:hover{
+             cursor: pointer;
+
+         }
+
+        /*Estilização do formulário 2*/
+        #h_2{
+            text-align: center;
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 30px;
+            padding-bottom: 0px;
+        }
+        #p-2{
+            padding-left:12px;
+            padding-right:12px;
+            padding-inline: 6px;
+            font-family:Arial;
+            text-align:left;
+            font-weight: bold;
+            font-size: 10px;
+            padding-top: 2px
+        }
+        .input_form2{
+            width: 100%;
+            border-radius: 5px;
+            height: 26px;
+            margin-top: 10px;
+            border: 1px solid grey;
+            
+        }
+        .label_form2{
+            font-size:15px;
+            
+
+        }
+        #msg_form2{
+            width:100%;
+            height: 100px;
+            margin-top: 10px;
+        }
+        #select_form2{
+            width: 100%;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid grey;
+        }
+        #Botao2{
+            padding-left: 5px;
+            text-align: left;
+            padding-top: 4px;
+            
+        }
+        #submit_form2{
+            width: 20%;
+            height: 40px;
+            background-color: #0d6ccc;
+            color:white;
+            border: hidden;
+            border-radius: 5px;
+        }
+        /*Estilização do formulário 3*/
+        #h2_form3{
+            font-size: 18px
+        }
+        #nome3{
+            width: 60%;
+        }
+        #email3{
+            width: 59%;
+        }
+        #endereco3{
+            width: 80%;
+        }
+        #cidade3{
+            width: 83%;
+        }
+        #telefone3_1{
+            width: 10%;
+        }
+        #telefone3_2{
+            width: 19%;
+        }
+        #Usuario3{
+            width: 32%;
+        }
+        #senha3{
+            width: 35%;
+        }
+    /*Estilização do formulário 4*/
+        #h1_form4{
+            font-size: 24px;
+        }
+        .radio_form4, .checkbox_form4, .submit_form4{
+             accent-color: black;
+             margin-right: 8px;
+         }
+         input[type='radio']:hover, input[type='checkbox']:hover{
+             cursor: pointer;
+         }
+    /*Estilização do formulário 5*/
+        #h1_form5{
+            text-align: center;
+            font-family: 'Times New Roman';
+        }
+        #h2_form5{
+            text-align: center;
+            font-family: 'Times New Roman';
+        }
+        h3{
+            font-family: 'Times New Roman';
+            font-size: 16px;
+            padding-left: 10px;
+        }
+        .p_form5{
+            font-family: 'Times New Roman';
+            font-size: 14px;
+            text-align: center;
+            padding-left: 10px;
+        }
+        #Nome5{
+            width: 80%;
+            height: 60px;
+        }
+        #nascimento5{
+            width: 7%;
+        }
+        #nascimento52{
+            width: 10%;
+        }
+        #telefone5{
+            width: 8%;
+        }
+        #tel5{
+            width: 20%;
+        }
+        #ramal5{
+            width: 8%;
+        }
+        .form-group{
+            display: flex;
+            justify-content: space-around;
+        }
+        .column-group{
+            display: flex;
+            flex-direction: column;
+        }
+        #desloc1{
+            margin-right: 94px;
+        }
+        #desloc2{
+            margin-left: 80px;
+        }
+
+        td{
+            width: 600px;
+        }
+        hr{
+            width: 800px;
+        }
+        #botao5{
+            text-align: center;
+            padding-top: 20px;
+        }
+        .submit_form5{
+            background: linear-gradient(white,rgba(98, 98, 235, 0.603));
+            border: 1px solid rgb(98, 98, 235);
+            border-radius: 3px;
+        }
+        .radio_form5, .checkbox_form5{
+            background-color: rgb(124, 124, 207);
+            accent-color: navy;
+        }
+        /*Estilização do formulário 7*/
+        #nascimentodia7, #nascimentomes7{
+            width: 45px;
+        }
+        #nascimentoano7{
+            width: 55px;
+        }
+
+        #rg7{
+            width: 80px;
+        }
+        #cpf7{
+            width: 80px;
+        }
+        #cpf72{
+            width: 40px;
+        }
+        #numero7{
+             width: 40px;
+        }
+        #cep7{
+            width: 80px;
+        }
+        #cep72{
+            width: 40px;
+        }
+        .alinha{
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            flex-wrap: wrap;
+            
+        }
+        .alinha .label7{
+            padding-left: 20px;
+            margin-right: 30px;
+        }
+        .input7{
+            align-self: auto;
+        }
+        /*Estilização do formulário 8*/
+        #h1_form8{
+            text-align: center;
+            font-family: Arial;
+            font-size: 24px;
+        }
+        #h2_form8{
+            text-align: left;
+            font-family: Arial;
+            font-weight: normal;
+            font-size: 18px;
+        }
+        #hr_form8{
+            width: 90%
+        }
+        .p_form8{
+            font-family: Arial;
+            font-size: 14px;
+            padding-left: 10px;
+        }
+        #botao8{
+            text-align: center;
+            padding-top: 20px;
+            height:30px;
+        }
+        /*Estilização do formulário 9*/
+        .h1_form9{
+            font-family: Arial;
+            font-size: 24px;
+        }
+        .h2_form9{
+            font-family: arial;
+            font-size: 18px;
+        }
+        .p_form9{
+            font-family: Arial;
+            font-size: 15px;
+        }
+        #botao9{
+            text-align:center
+        }
+
+    </style>
+</head>
+<body style="width:100vh">
+    <!--Formulário 1:-->
+    <fieldset style ="padding: 20px; width:400px; margin: auto;">
+        <legend style="text-align: center;">Primeiro Formulário</legend>
+        <form action="" method="get">
+            <h1 id="h_form1">Envie uma mensagem preenchendo o formulário abaixo</h1>
+            <p id="p_form1">
+                <label for="nome" class="label_form1">Seu nome:</label><br>
+                <input type="text" name="nome" class="input_form1" placeholder="Meu nome E Sobrenome" required>
+            </p>
+            <p id="p_form1">
+                <label for="telefone" class="label_form1">Seu Telefone:</label><br>
+                <input type="number" name="telefone" class="input_form1" placeholder="999999999">
+            </p>
+            <p id="p_form1">
+                <label for="email" class="label_form1">Seu E-mail:</label><br>
+                <input type="email" name="email" class="input_form1" placeholder="meuemail@exemplo.com.br">
+            </p>
+            <p id="p_form1">
+                <label for="newsletter" class="label_form1">Deseja receber nossas novidades?</label><br>
+                <input type="radio" name="newsletter" class="radio_form1" value="sim" checked> Sim
+                <input type="radio" name="newsletter" class="radio_form1" value="nao"> Não
+            </p>
+            <p id="p_form1">
+                <label for="mensagem" class="label_form1">Sua Mensagem:</label><br>
+                <textarea name="mensagem" id="msg_form1" placeholder="Minha mensagem de exemplo!" required></textarea>
+            </p>
+            <p id="botao1">
+                <input type="submit" id="submit_form1" value="Enviar">
+            </p>
+        </form>
+
+    </fieldset>
+    
+    <!--Formulário 2:-->
+    
+    <fieldset style="padding:20px; width:500px">
+    <form action="" method="get">
+        <h1 id="h_2">Formulário de Contrato - Canal TI</h1>
+        <p id="p-2">
+            <label for="nome2" class="label_form2">Nome</label><br>
+            <input type="text" name="nome2" class="input_form2" placeholder="Seu nome">
+        </p>
+        <p id="p-2">
+            <label for="email2" class="label_form2">Email *</label><br>
+            <input type="email" name="email2" class="input_form2" placeholder="Seu email" required>
+        </p>
+        <p id="p-2">
+            <label for="Assunto" class="label_form2">Assunto</label><br>
+            <select name="Assunto" class="input_form2" id="select_form2">
+                <option value="" disabled selected hidden>Reportar erro</option>
+            </select>
+        </p>
+        <p id="p-2">
+            <label for="mensagem2" class="label_form2">Mensagem *</label><br>
+            <textarea name="mensagem2" id="msg_form2" placeholder="Deixe sua mensagem" required></textarea>
+        </p>
+        <p id="Botao2">
+            <input type="submit" id="submit_form2" value="Enviar">
+        </p>
+    </form>
+</fieldset>
+
+<!-- Formulário 3-->
+
+<fieldset style="width: 420px;">
+    <form action="" method="get">
+        <h1 id="h1_form3">Formulário de Inscrição</h1>
+        <h2 id="h2_form3">Preencha seus dados</h2>
+        <p>
+            <label for="nome3" id="label_form3">Nome:</label>
+            <input type="text" name="nome3" id="nome3">
+        </p>
+        <p>
+            <label for="email3" id="label_form3">E-mail:</label>
+            <input type="email" name="email3" id="email3">
+        </p>
+        <p>
+            <label for="endereco3" id="label_form3">Endereço:</label>
+            <input type="text" name="endereco3" id="endereco3">
+        </p>
+        <p>
+            <label for="cidade3" id="label_form3">Cidade:</label>
+            <input type="text" name="cidade3" id="cidade3">
+        </p>
+        <p>
+            <label for="telefone3" id="label_form3">Telefone:</label>
+            <input type="number" name="telefone3" id="telefone3_1">
+            <input type="number" name="telefone3" id="telefone3_2">
+        </p>
+        <p>
+            <label for="Usuario3" id="label_form3">Usuário:</label>
+            <input type="text" name="Usuario3" id="Usuario3" placeholder="Entre com seu login">
+        </p>
+        <p>
+            <label for="senha3" id="label_form3">Senha:</label>
+            <input type="password" name="senha3" id="senha3">
+        </p>
+        <p>
+            <input type="submit" id="submit_form3" value="Finalizar minha inscrição">
+        </p>
+    </form>
+</fieldset>
+
+<!-- Formulário 4-->
+<form action="" method="get">
+    <h1 for="h1_form4">Formulário</h1>
+    <fieldset style="width: 520px;">
+        <legend>Dados Pessoais</legend>
+        <p>
+            <label for="nome4" id="label_form4">Nome:</label>
+            <input type="text" name="nome4" id="nome4">
+        </p>
+        <p>
+            <label for="endereco4" id="label_form4">Endereço:</label>
+            <input type="text" name="endereco4" id="endereco4">
+        </p>
+        <p>
+            <label for="cidade4" id="label_form4">Cidade:</label>
+            <input type="text" name="cidade4" id="cidade4">
+        </p>
+        <p>
+            <label for="Estado4" id="label_form4">Estado:</label>
+            <select type="text" name="Estado4" id="Estado4">
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP" selected>São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+        </p>
+    </fieldset>
+    <fieldset style="width: 520px; margin-top: 20px;">
+        <legend>Dados Profissionais</legend>
+        <p>
+            <label for="Cargo4">Natureza do Cargo:</label><br>
+            <input type="radio" name="Cargo4" class="radio_form4" checked>Gerência
+            <input type="radio" name="Cargo4" class="radio_form4">Financeiro
+            <input type="radio" name="Cargo4" class="radio_form4">Recepção
+            <input type="radio" name="Cargo4" class="radio_form4">Administrativo
+            <input type="radio" name="Cargo4" class="radio_form4">Jurídico<br>
+        </p>
+        <p>
+            <label for="Area4">Área de Interesse:</label><br>
+            <input type="checkbox" name="Area4" class="checkbox_form4">Computação
+            <input type="checkbox" name="Area4" class="checkbox_form4">Biologia
+            <input type="checkbox" name="Area4" class="checkbox_form4">Meio Ambiente
+            <input type="checkbox" name="Area4" class="checkbox_form4">Engenharia
+            <input type="checkbox" name="Area4" class="checkbox_form4">História
+        </p>
+        <p>
+            <label for="curriculo4">Mini-curriculo:</label>
+            <textarea name="curriculo4" id="curriculo4" rows="5" cols="40"></textarea>
+        </p>
+        <p>
+            <input type="submit" class="submit_form4" value="Enviar"><input type="submit" class="submit_form4" value="Limpar">
+        </p>
+
+    </fieldset>
+</form>
+
+<!-- Formulário 5-->
+ <form action="" method="get">
+    <h1 id="h1_form5">Escola virtual</h1>
+    <h2 id="h2_form5">Formulário de Pré-Matrícula</h2>
+    <hr>
+    <table border="1" align="center">
+        <tr>
+            <td>
+                <h3>Dados Pessoais</h3>
+                <div class="column-group">
+                    <p class="p_form5">
+                        <label for="nome5">Nome do aluno:</label>
+                        <input type="text" name="nome5" id="nome5">
+                    </p>
+                <div id="desloc1">
+                    <p class="p_form5">
+                        <label for="nascimento5">Nascimento (dd/mm/aaaa):</label>
+
+                        <input type="number" name="nascimento5" id="nascimento5">/
+                        <input type="number" name="nascimento5" id="nascimento5">/
+                        <input type="number" name="nascimento5" id="nascimento52">
+                    </p>
+                </div>
+                    <p class="p_form5">
+                        <label for="mae5">Nome da mãe:</label>
+                        <input type="text" name="mae5" id="mae5">
+                        </p>
+                    <p class="p_form5">
+                        <label for="pai5">Nome do pai:</label>
+                        <input type="text" name="pai5" id="pai5">
+                    </p>
+                    <div id="desloc2">
+                    <p class="p_form5">
+                        <label for="telefone5">Telefone: </label>
+                        DDD (<input type="number" name="telefone5" id="telefone5">)
+                        <label for="tel5">tel:</label>
+                        <input type="number" name="tel5" id="tel5">
+                        <label for="ramal5">ramal:</label>
+                        <input type="number" name="ramal5" id="ramal5">
+                    </p>
+                    </div>
+                
+                    <p class="p_form5">
+                        <label for="email5">E-Mail:</label>
+                        <input type="email" name="email5" id="email5">
+                    </p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Informações de Matrícula</h3>
+                <div class="form-group">
+                    <p class="p_form5">
+                        <label for="serie5">Série:</label>
+                        <Select type="text" name="serie5" id="serie5">
+                            <option value="pre-escola" selected>pré-escola</option>
+                            <option value="ensino fundamental">ensino fundamental</option>
+                            <option value="ensino médio">ensino médio</option>
+                        </Select>
+                    </p>
+                    <p>
+                        <label for="turno5">Turno:</label><br>
+                        <input type="radio" name="turno5" class="radio_form5">Manhã<br>
+                        <input type="radio" name="turno5" class="radio_form5">Tarde
+                    </p>
+                    <p>
+                        <label for="atividades5">Atividades Extracurriculares:</label><br>
+                        <input type="checkbox" name="atividades5" class="checkbox_form5">Música<br>
+                        <input type="checkbox" name="atividades5" class="checkbox_form5">Balet<br>
+                        <input type="checkbox" name="atividades5" class="checkbox_form5">Pintura<br>
+                        <input type="checkbox" name="atividades5" class="checkbox_form5">Judô<br>
+                        <input type="checkbox" name="atividades5" class="checkbox_form5">Futebol<br>
+                    </p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <p id="botao5">
+    <input type="submit" value="Enviar formulário" class="submit_form5">  <input type="submit" value="Limpa Campos" class="submit_form5">
+    </p>
+ </form>
+<hr>
+ <!--Formulário 6-->
+ <form action="" method="get">
+    <h1>Cadastro</h1>
+    <p>
+        <label for="nome6">Nome</label>
+        <input type="text" name="nome6" id="nome6">
+        <label for="email6">Email</label>
+        <input type="email" name="email6" id="email6">
+    </p>
+    <p>
+        <label for="telefone6">Telefone com DDD</label>
+        <input type="number" name="telefone6" id="telefone6" placeholder="11 99999-9999">
+        <label for="horario">Hora desejada</label>
+        <input type="time" name="horario" id="horario">
+    </p>
+    <p>
+        <label for="site6">Seu site</label>
+        <input type="url" name="site6" id="site6">
+        <label for="senha6">Senha</label>
+        <input type="password" name="senha6" id="senha6">
+    </p>
+    <p>
+        <label for="data6">Data Nasc</label>
+        <input type="date" name="data6" id="data6">
+        <label for="cor6">Cor favorita</label>
+        <input type="color" name="cor6" id="cor6">
+    </p>
+    <p>
+        <label for="quant6">Qtde Filhos</label>
+        <input type="number" name="quant6" id="quant6">
+        <label for="peso6">Peso</label>
+        1<input type="range" name="peso6" id="peso6" min="1" max="200" step="0.01">200
+
+    </p>
+    <p>
+        <label for="sexo6">Sexo</label><br>
+        <input type="radio" name="sexo6" id="sexo6" value="masculino">Masculino<br>
+        <input type="radio" name="sexo6" id="sexo6" value="feminino">Feminino<br>
+    </p>
+    <p>
+        <label for="estado6">Estado</label>
+        <select name="estado6" id="estado6">
+            <option value="sp" selected>SP</option>
+            <option value="rj">RJ</option>
+            <option value="mg">MG</option>
+        </select>
+    </p>
+    <p>
+        <label for="msg6">Mensagem</label><br>
+        <textarea name="msg6" id="msg6" rows="4" cols="50"></textarea>
+
+    </p>
+    <p>
+        <input type="submit" value="Reset">
+        <input type="submit" value="Enviar">
+    </p>
+ </form>
+
+ <!--Formulário7-->
+ <form action="" method="get">
+    <h1 style="font-family: 'Times New roman'; font-size: 24px;">Preencha o formulário abaixo</h1>
+    <fieldset class="fieldset7">
+        <legend>Dados Pessoais</legend>
+        <p>
+            <label for="nome7">Nome:</label>
+            <input type="text" name="nome7" id="nome7" class="input7">
+        </p>
+        <p>
+            <label for="sobrenome7">Sobrenome:</label>
+            <input type="text" name="sobrenome7" id="sobrenome7" class="input7">
+        </p>
+        <p>
+            <label for="nascimento7">Nascimento:</label>
+            <input type="number" name="nascimentodia7" id="nascimentodia7" placeholder="dd" maxlength="2">/
+            <input type="number" name="nascimentomes7" id="nascimentomes7" placeholder="mm" maxlength="2">/
+            <input type="number" name="nascimentoano7" id="nascimentoano7" placeholder="aaaa" maxlength="4">
+        </p>
+        <p>
+            <label for="rg7">RG:</label>
+            <input type="number" name="rg7" id="rg7" class="input7">
+        </p>
+        <p>
+            <label for="cpf7">CPF:</label>
+            <input type="number" name="cpf7" id="cpf7" class="input7">-<input type="number" name="cpf7" id="cpf72">
+
+        </p>
+    </fieldset>
+    <fieldset class="fieldset7">
+        <legend>Dados de Endereço</legend>
+        <div class="alinha">
+        <p>
+            <label for="rua7" class="label7">Rua:</label>
+        </p>
+        <p>
+            <input type="text" name="rua7" id="rua7">
+        </p>
+        </div>
+        <div class="alinha">
+        <p>
+            <label for="numero7" class="label7">Número:</label>
+        </p>
+        <p>
+            <input type="number" name="numero7" id="numero7">
+        </p>
+        </div>
+        
+        <div class="alinha">
+        <p>
+            <label for="bairro7" class="label7">Bairro:</label>
+        </p>
+        <p>
+            <input type="text" name="bairro7" id="bairro7">
+        </p>
+        </div>
+
+        <div class="alinha">
+        <p>
+            <label for="estado7" class="label7">Estado:</label>
+        </p>
+        <p>
+            <select name="estado7" id="estado7">
+                <option value="AC">Acre</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+            </select>
+        </p>
+        </div>
+
+        <div class="alinha">
+        <p>
+            <label for="cidade7" class="label7">Cidade:</label>
+        </p>
+        <P>
+            <input type="text" name="cidade7" id="cidade7">
+        </p>
+        </div>
+        <div class="alinha">
+        <p>
+            <label for="cep7" class="label7">CEP:</label>
+        </P>
+        <P>
+            <input type="number" name="cep7" id="cep7">-<input type="number" name="cep7" id="cep72">
+        </p>
+        </div>
+    </fieldset>
+    <fieldset class="fieldset7">
+        <legend>Dados de Login</legend>
+        <p>
+            <label for="email7">Email:</label>
+            <input type="email" name="email7" id="email7">
+        </p>
+        <p>
+            <label for="imagem7">Imagem de perfil:</label>
+            <input type="file" name="imagem7" id="imagem7">
+        </p>
+        <p>
+            <label for="usuario7">Login de Usuário:</label>
+            <input type="text" name="usuario7" id="usuario7">
+        </p>
+        <p>
+            <label for="senha7">Senha:</label>
+            <input type="password" name="senha7" id="senha7">
+        </p>
+        <p>
+            <label for="confsenha7">Confirme sua senha:</label>
+            <input type="password" name="confsenha7" id="confsenha7">
+        </p>
+    </fieldset>
+ <input type="submit" value="Enviar formulário">  <input type="submit" value="Limpar">
+ </form>
+
+ <!-- Formulário 8-->
+    <fieldset style="border:hidden; width: 50%;">
+    <h1 id="h1_form8" style="text-align: left;">Uso exclusivo para cadastro de Empresas</h1>
+    <h2 id="h2_form8">Use este formulário para cadastrar sua empresa GRATUITAMENTE, assim facilitará o envio da proposta</h2>
+    <hr id="hr_form8">
+    <h1 id="h1_form8">Dados cadastrais da empresa</h1>
+    <hr id ="hr_form8" style=" margin-left: 80px;">
+    <form action="" method="get">
+        <p class="p_form8">
+            <label for="nome8">Nome fantasia <span style="color: red">*</span></label>
+            <span style="padding-left: 50px;"><input type="text" name="nome8" id="nome8" required></span><br>
+            <span style="padding-left: 160px; font-size: 12px; color:grey">Nome fantasia da sua empresa</span>
+        </p>
+        <p class="p_form8">
+            <label for="cnpj8">Email <span style="color: red">*</span></label>
+            <span style="padding-left: 104px;"><input type="email" name="cnpj8" id="cnpj8" required placeholder="ex.:seuemail@empresa.com.br"><br></span>
+        </p>
+        <p class="p_form8">
+            <label for="site8">Site da empresa <span style="color: red">*</span></label>
+            <span style="padding-left: 42px;"><input type="url" name="site8" id="site8" required placeholder="ex.://www.empresa.com.br"><br></span>
+        </p>
+        <p class="p_form8">
+            <label for="responsavel8">Responsável Legal da Empresa <span style="color: red">*</span></label>
+            <span style="padding:0px"><input type="text" name="responsavel8" id="responsavel8" required></span><br>
+        </p>
+        <div class="alinha" style="flex-direction: row;align-items: flex-start; width:600px; flex-wrap: nowrap;">
+            <p class="p_form8">
+                <span style="padding-left:0px"><label for="cidade8" style="padding: 0px">Cidades operacionais <span style="color: red">*</span></label></span>
+            </p>
+            <p class="p_form8" style="border-left: 20px;">
+                <input type="checkbox" name="cidade8" id="cidade8" value="Los Santos"> Los Santos SA
+                <span style="margin-left: 40px;"><input type="checkbox" name="cidade8" id="cidade8" value="San Fierro"> San Fierro  SA</span><br>
+                <input type="checkbox" name="cidade8" id="cidade8" value="Las Venturas"> Las Venturas SA
+                <span style="margin-left: 28px;"><input type="checkbox" name="cidade8" id="cidade8" value="Red County"> Red County</span><br>
+                <input type="checkbox" name="cidade8" id="cidade8" value="Bone County"> Bone County 
+                <span style="margin-left: 50px;"></span><input type="checkbox" name="cidade8" id="cidade8" value="Flint County"> Flint County <br>
+                <input type="checkbox" name="cidade8" id="cidade8" value="Tierra Robada"> Tierra Robada
+                <span style="margin-left: 43px;"></span><input type="checkbox" name="cidade8" id="cidade8" value="Whetstone"> Whetstone <br>
+                <input type="checkbox" name="cidade8" id="cidade8" value="Todas"> Todas as opções <br>
+
+            </p>
+        </div>
+        <p class="p_form8">
+            <label for="data8">Data de fundação da empresa <span style="color: red">*</span></label>
+            <input type="date" name="data8" id="data8" required>
+        </p>
+        <p class="p_form8">
+            <div class="alinha" style="flex-direction: row; align-items: flex-start; width:600px; flex-wrap: nowrap;">
+                <p class="p_form8">
+                <label for="descricao8">Descrição sumária da empresa <span style="color:red">*</span></label>
+                </p>
+                <p>
+                <textarea name="descricao8" id="descricao8" rows="5" cols="50" required placeholder="Fale sobre a sua empresa..."></textarea><br>
+                </p>
+            </div>
+        </p>
+        <p id="botao8">
+            <input type="submit" value="Enviar" style="background: linear-gradient(rgba(2, 2, 247, 0.747),rgba(11, 119, 243, 0.842)); border:1px solid rgba(2, 2, 247, 0.747); width: 100px;">
+        </p>
+    </form>
+  </fieldset>
+
+  <!-- Formulário 9-->
+  <fieldset style="width:300px; margin:auto; padding: 20px">
+    <h1 class="h1_form9">Formulário para Reserva de Viagem</h1>
+    <h2 class="h2_form9">Por favor, nos forneça as informações de contato abaixo e faremos a reserva da sua viagem.</h2>
+    <hr>
+    <form action=""></form>
+        <p class="p_form9">
+            <label for="nome9">Nome do contato</label>
+        </p>
+        <p class="p_form9">
+            <input type="text" name="nome9" id="nome9" style="width: 200px; height: 20px;">
+            <span span="padding-left:0px;"><input type="text" name="sobrenome9" id="sobrenome9" style="width:200px;height: 20px"></span><br>
+            <span style="padding-right: 180px; font-family: Arial; font-size: 12px; color:grey">Nome</span><span style="font-family: Arial; font-size: 12px; color:grey">Sobrenome</span>
+        </p>
+        <p class="p_form9">
+            <label for="data9">Data de Nascimento</label><br>
+        </p>
+        <p>
+            <input type="number" name="nascimentodia9" id="nascimentodia9" placeholder="por favor, selecione um dia" maxlength="2" max="31" style="height: 20px;">
+            <input type="number" name="nascimentomes9" id="nascimentomes9" placeholder="por favor, selecione um mês" maxlength="2" max="12"style="height: 20px;">
+            <input type="number" name="nascimentoano9" id="nascimentoano9" placeholder="por favor, selecione um ano" maxlength="4" max="2024" style="height: 20px;"><br>
+            <span style="font-family: Arial; font-size: 12px; color:grey;">Dia</span><span style="padding-left: 163px; font-family: Arial; font-size: 12px; color:grey;">Mês</span><span style="padding:160px; font-family: Arial; font-size: 12px; color:grey;">Ano</span>
+        </p>
+        <p class="p_form9">
+            <label for="organizacao9">Nome da organização</label><br>
+        </p>
+        <p>
+            <input type="text" name="organizacao9" id="organizacao9" style="width:200px; height: 20px;">
+        </p>
+        <p class="p_form9">
+            <label for="email9">E-mail</label><br>
+        </p>
+        <p>
+            <input type="email" name="email9" id="email9" style="width: 200px; height:20px"><br>
+            <span style="font-family: Arial; font-size: 12px; color:grey;">exemplo@exemplo.com</span>
+        </p>
+        <p class="p_form9">
+            <label for="telefone9">Número de telefone</label><br>
+        </p>
+        <p>
+            <input type="number" name="telefone9" id="telefone9" placeholder="(00) 0000-0000" style="width:200px; height:20px"><br>
+            <span style="font-family: Arial; font-size: 12px; color:grey;">Favor inserir um número de telefone válido</span>
+        </p>
+        <h2 class="h2_form9">Detalhes da viagem</h2>
+        <p class="p_form9">
+            <label for="pais9">País de saída</label><br>
+        </p>
+        <p>
+            <select name="pais9" id="pais9" style="width: 200px; height:20px">
+                <option value="" selected hidden>Favor selecionar</option>
+                <option value="brasil">Brasil</option>
+                <option value="estados-unidos">Estados Unidos</option>
+                <option value="canada">Canadá</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+        </p>
+        <p class="p_form9">
+            <label for="destino9">País de destino</label><br>
+        </p>
+        <p>
+            <select name="destino9" id="destino9" style="width: 200px; height: 20px;">
+                <option value="" selected hidden>Favor selecionar</option>
+                <option value="franca">França</option>
+                <option value="italia">Itália</option>
+                <option value="japao">Japão</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+        </p>
+        <p class="p_form9">
+            <label for="data9">Data e hora de saída</label><br>
+        </p>
+        <p>
+            <input type="date" name="data9" id="data9" style="width: 150px; height: 20px;"><span style="padding-left:20px;"><input type="time" name="hora9" id="hora9" style="height: 20px;"></span><br>
+            <span style="font-family: Arial; font-size: 12px; color:grey;">Data</span><span style="padding-left: 150px; font-family: Arial; font-size: 12px; color:grey;">Hora</span>
+        </p>
+        <p class="p_form9">
+            <label for="retorno9">Data e hora de retorno</label><br>
+        </p>
+        <p>
+            <input type="date" name="retorno9" id="retorno9" style="width: 150px; height: 20px;"><span style="padding-left:20px;"><input type="time" name="retornohora9" id="retornohora9" style="height: 20px;"></span><br>
+            <span style="font-family: Arial; font-size: 12px; color:grey;">Data</span><span style="padding-left: 150px; font-family: Arial; font-size: 12px; color:grey;">Hora</span>
+        </p>
+        <p class="p_form9">
+            <label for="classe9">Classe da viagem</label><br>
+        </p>
+        <p>
+            <select name="classe9" id="classe9" style="width: 200px; height: 20px;">
+                <option value="" selected hidden>Favor selecionar</option>
+                <option value="economica">Econômica</option>
+                <option value="executiva">Executiva</option>
+                <option value="primeira-classe">Primeira Classe</option>
+            </select>
+        </p>
+        <p class="p_form9">
+            <label for="sevico9">Por favor, marque os serviços que você precisa</label><br>
+        </p>
+        <p>
+            <input type="checkbox" name="servico9" id="servico9" value="passagem"> Passagens aéreas<br>
+            <input type="checkbox" name="servico9" id="servico9" value="aluguel"> Aluguel de carros<br>
+            <input type="checkbox" name="servico9" id="servico9" value="hotel"> Acomodações em hotéis<br>
+        </p>
+        <h2 class="h2_form9">Detalhes do viajante</h2>
+        <p class="p_form9">
+            <label for="hotel9">Grupo de Hotéis Preferidos</label><br>
+        </p>
+        <p>
+            <input type="text" name="hotel9" id="hotel9" style="width: 200px; height:20px">
+        </p>
+        <p class="p_form9">
+            <label for="companhia9">Companhia Aérea Preferida</label><br>
+        </p>
+            <input type="text" name="companhia9" id="companhia9" style="width: 200px; height:20px">
+        </p>
+        <p class="p_form9">
+            <label for="informacao9">Informações Adicionais</label><br>
+        </p>
+        <p>
+            <textarea name="informacoes9" id="informacoes9" rows="10" cols="50" placeholder="Escreva aqui..."></textarea>
+        </p>
+        <p id="botao9">
+            <input type="submit" value="Enviar Formulário" style="background-color: rgb(3, 110, 3);color: white; width: 150px; border: hidden; border-radius: 3px;height: 30px; align-items: auto;">
+        </p>
+  </fieldset>
+</body>
+</html>

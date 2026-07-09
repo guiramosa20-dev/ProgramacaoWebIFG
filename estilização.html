@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <style>
+        .imagens{
+            display: flex;
+            background: #e0e0e0;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0px;
+        }
+        img{
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+        }
+        .tabs-container{
+            max-width: 800px;
+            margin: 50px auto;
+            font-family: Arial, sans-serif;
+        }
+        .tab-buttons{
+            display: flex;
+            border-bottom: 2px solid #ddd
+        }
+        .tab-buttons label{
+            padding: 15px 30px;
+            cursor: pointer;
+            background: #f0f0f0;
+            border-bottom: none;
+            margin-right: 5px;
+            border-radius: 5px 5px 0 0;
+            transition: all 0.3s;
+        }
+
+        .tab-buttons label:hover{
+            background: #e0e0e0
+        }
+
+        input[type="radio"]{
+            display: none;
+        }
+        .tab-content{
+            display: none;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-top: none;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn{
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        #tab1:checked ~ .tab-buttons label[for="tab1"],
+        #tab2:checked ~ .tab-buttons label[for="tab2"],
+        #tab3:checked ~ .tab-buttons label[for="tab3"],
+        #tab4:checked ~ .tab-buttons label[for="tab4"],
+        #tab5:checked ~ .tab-buttons label[for="tab5"]{
+            background: white;
+            border-bottom: 2px solid white;
+            margin-bottom: -2px;
+            font-weight: bold;
+        }
+
+        #tab1:checked ~ .content1,
+        #tab2:checked ~ .content2,
+        #tab3:checked ~ .content3,
+        #tab4:checked ~ .content4,
+        #tab5:checked ~ .content5{
+            display:block
+        }
+    </style>
+  </head>
+  <body>
+    <div class="tabs-container">
+        <!-- Inputs radio escondidos que controlam qual aba está ativa -->
+        <!-- O atributo 'checked' faz com que a primeira aba inicie selecionada -->
+        <input type="radio" id="tab1" name="tabs" checked>
+        <input type="radio" id="tab2" name="tabs">
+        <input type="radio" id="tab3" name="tabs">
+        <input type="radio" id="tab4" name="tabs">
+        <input type="radio" id="tab5" name="tabs">
+
+        <!-- Botões das abas (labels conectados aos radios pelo atributo 'for') -->
+        <div class="tab-buttons">
+            <label for="tab1">HTML</label>
+            <label for="tab2">CSS</label>
+            <label for="tab3">JavaScript</label>
+            <label for="tab4">PHP</label>
+            <label for="tab5">Python</label>
+        </div>
+
+        <!-- Conteúdo de cada aba -->
+        <div class="tab-content content1">
+            <h2>HTML - Linguagem de Marcação</h2>
+            <p>HTML é a base de qualquer página web...</p>
+            <div class="imagens">
+                <img src="https://th.bing.com/th/id/OIP.qF-5pDFdeBN8DhoN2tlBcQHaD3?w=325&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="https://th.bing.com/th/id/OIP.rbrHgjHJov9cIaqjLdTh5AHaFE?w=247&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="img/pudim.jpeg" alt="">
+                <img src="https://th.bing.com/th/id/OIP.C36Lag1nJ_tubKirEgouyAHaE8?w=294&h=183&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="https://th.bing.com/th/id/OIP.FhqFXwRkCLJBZ8GypNy2vwHaE8?w=294&h=183&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="https://th.bing.com/th/id/OIP.113DmiuHzmxHJ3PjX8AoMQHaCB?w=247&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="img/pudim.jpeg" alt="">
+                <img src="img/pudim.jpeg" alt="">
+                <img src="img/pudim.jpeg" alt="">
+            </div>
+        </div>
+
+        <div class="tab-content content2">
+            <h2>CSS - Estilização</h2>
+            <p>CSS3 traz recursos avançados como flexbox, grid...</p>
+            <div class="imagens">
+                <img src="https://th.bing.com/th/id/OIP.qF-5pDFdeBN8DhoN2tlBcQHaD3?w=325&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="https://th.bing.com/th/id/OIP.rbrHgjHJov9cIaqjLdTh5AHaFE?w=247&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="img/pudim.jpeg" alt="">
+                <img src="https://th.bing.com/th/id/OIP.C36Lag1nJ_tubKirEgouyAHaE8?w=294&h=183&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="https://th.bing.com/th/id/OIP.FhqFXwRkCLJBZ8GypNy2vwHaE8?w=294&h=183&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="https://th.bing.com/th/id/OIP.113DmiuHzmxHJ3PjX8AoMQHaCB?w=247&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="img/pudim.jpeg" alt="">
+                <img src="img/pudim.jpeg" alt="">
+                <img src="img/pudim.jpeg" alt="">
+            </div>
+        </div>
+
+        <div class="tab-content content3">
+            <h2>JavaScript - Interatividade</h2>
+            <p>JavaScript adiciona dinamismo às páginas...</p>
+            <div class="imagens">
+                <img src="https://th.bing.com/th/id/OIP.qF-5pDFdeBN8DhoN2tlBcQHaD3?w=325&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="https://th.bing.com/th/id/OIP.rbrHgjHJov9cIaqjLdTh5AHaFE?w=247&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="img/pudim.jpeg" alt="">
+                <img src="https://th.bing.com/th/id/OIP.C36Lag1nJ_tubKirEgouyAHaE8?w=294&h=183&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="https://th.bing.com/th/id/OIP.FhqFXwRkCLJBZ8GypNy2vwHaE8?w=294&h=183&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="https://th.bing.com/th/id/OIP.113DmiuHzmxHJ3PjX8AoMQHaCB?w=247&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="img/pudim.jpeg" alt="">
+                <img src="img/pudim.jpeg" alt="">
+                <img src="img/pudim.jpeg" alt="">
+            </div>
+        </div>
+        <div class="tab-content content4">
+            <h2>PHP - Linugagem de programação</h2>
+            <p>É a do elefante drogado.</p>
+            <div class="imagens">
+                <img src="https://th.bing.com/th/id/OIP.qF-5pDFdeBN8DhoN2tlBcQHaD3?w=325&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="https://th.bing.com/th/id/OIP.rbrHgjHJov9cIaqjLdTh5AHaFE?w=247&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="img/pudim.jpeg" alt="">
+                <img src="https://th.bing.com/th/id/OIP.C36Lag1nJ_tubKirEgouyAHaE8?w=294&h=183&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="https://th.bing.com/th/id/OIP.FhqFXwRkCLJBZ8GypNy2vwHaE8?w=294&h=183&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="https://th.bing.com/th/id/OIP.113DmiuHzmxHJ3PjX8AoMQHaCB?w=247&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="img/pudim.jpeg" alt="">
+                <img src="img/pudim.jpeg" alt="">
+                <img src="img/pudim.jpeg" alt="">
+            </div>
+        </div>
+        <div class="tab-content content5">
+            <h2>Python - Linguagem de programação</h2>
+            <p>É a das cobrinhas azul e amarela.</p>
+            <div class="imagens">
+                <img src="https://th.bing.com/th/id/OIP.qF-5pDFdeBN8DhoN2tlBcQHaD3?w=325&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="https://th.bing.com/th/id/OIP.rbrHgjHJov9cIaqjLdTh5AHaFE?w=247&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="img/pudim.jpeg" alt="">
+                <img src="https://th.bing.com/th/id/OIP.C36Lag1nJ_tubKirEgouyAHaE8?w=294&h=183&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="https://th.bing.com/th/id/OIP.FhqFXwRkCLJBZ8GypNy2vwHaE8?w=294&h=183&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="https://th.bing.com/th/id/OIP.113DmiuHzmxHJ3PjX8AoMQHaCB?w=247&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+                <img src="img/pudim.jpeg" alt="">
+                <img src="img/pudim.jpeg" alt="">
+                <img src="img/pudim.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Anime Girls</title>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    max-width: 900px;
+    margin: auto;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: #f0f0f0;
+    padding: 10px;
+    z-index: 10;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h1 {
+    text-align: center;
+    border: dotted;
+    border-radius: 50px;
+    padding: 10px;
+    animation: glow 3s infinite;
+}
+
+@keyframes glow {
+    0% { color: #2c3e50; }
+    50% { color: #2980b9; }
+    100% { color: #2c3e50; }
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 5px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2980b9;
+}
+
+section {
+    margin-top: 40px;
+}
+
+.card {
+    display: flex;
+    gap: 15px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 150px;
+    border-radius: 8px;
+}
+
+p {
+    text-align: justify;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #2980b9;
+    color: white;
+}
+
+form {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    margin: 30px 0;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1 id="top">Best Anime Girls</h1>
+<nav>
+<ul>
+<li><a href="#definition">Definition</a></li>
+<li><a href="#shounen">Shounen</a></li>
+<li><a href="#shoujo">Shoujo</a></li>
+<li><a href="#slice">Slice of Life</a></li>
+</ul>
+</nav>
+</header>
+
+<section id="definition">
+<h2>What is "Best Girl"?</h2>
+<p>A "Best Girl" is the most beloved female character in a series, based on personality, design, and impact.</p>
+</section>
+
+<section id="shounen">
+<h2>Battle Shounen</h2>
+
+<div class="card">
+<img src="https://i.pinimg.com/1200x/d6/27/ea/d627ea99da0a0a7567c0fcdb0fa43b15.jpg">
+<div>
+<h3>Momo Ayase</h3>
+<p>A proactive and stylish fighter loved by fans.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://i.pinimg.com/736x/22/74/9f/22749f88db353ff81fad05cce843245b.jpg">
+<div>
+<h3>Nobara Kugisaki</h3>
+<p>Strong and confident without losing femininity.</p>
+</div>
+</div>
+
+</section>
+
+<section id="shoujo">
+<h2>Magical Shoujo</h2>
+
+<div class="card">
+<img src="https://i.pinimg.com/736x/d7/6b/22/d76b228d94c80555e54f4ddb0d88928b.jpg">
+<div>
+<h3>Madoka</h3>
+<p>A symbolic and powerful magical girl.</p>
+</div>
+</div>
+
+</section>
+
+<section id="slice">
+<h2>Slice of Life</h2>
+
+<div class="card">
+<img src="https://i.pinimg.com/1200x/8b/5f/5b/8b5f5bf586dd45eb9746302f4286a401.jpg">
+<div>
+<h3>Anna Yamada</h3>
+<p>A relatable and emotionally engaging character.</p>
+</div>
+</div>
+
+</section>
+
+<section>
+<h2>Quick Comparison</h2>
+<table>
+<tr><th>Character</th><th>Genre</th></tr>
+<tr><td>Momo</td><td>Shounen</td></tr>
+<tr><td>Madoka</td><td>Shoujo</td></tr>
+<tr><td>Anna</td><td>Slice of Life</td></tr>
+</table>
+</section>
+
+<section>
+<h2>Vote Your Best Girl</h2>
+<form>
+<label>Name:</label><br>
+<input type="text"><br><br>
+
+<label>Favorite:</label><br>
+<select>
+    <option aria-placeholder="" hidden>selecione uma das personagens a cima</option>
+<option>Momo</option>
+<option>Nobara</option>
+<option>Madoka</option>
+<option>Anna</option>
+</select><br><br>
+
+<input type="submit" value="Vote">
+</form>
+</section>
+
+<footer>
+<a href="#top">Back to top</a>
+</footer>
+
+</body>
+</html>

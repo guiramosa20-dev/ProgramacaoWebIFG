@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile First</title>
+    <style>
+        @media (max-width: 768px){
+            body{
+                background-image: url(img/pudim.jpeg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100vh;
+
+            }
+            #pudim{
+                font-size: 18px;
+                color: white;
+                font-family: cursive;
+                text-shadow: 5px 5px black;
+            }
+            #clt{
+                visibility: hidden;
+            }
+            #deuRuim{
+                visibility:hidden
+            }
+        }
+        @media (min-width:1200px){
+            body{
+                background-image: url(https://th.bing.com/th?q=CLT+Carteira+De+Trabalho&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&pid=InlineBlock&rm=3&mkt=pt-BR&cc=BR&setlang=pt-br&adlt=moderate&t=1&mw=247);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100vh;
+            }
+            #clt{
+                font-size: 40px;
+                color: red;
+                font-family:Impact;
+                text-shadow: 5px 5px 5px navy;
+            }
+            #pudim{
+                visibility: hidden
+            }
+            #deuRuim{
+                visibility: hidden;
+            }
+        }
+        @media(min-width: 600px){
+            body{
+                background: navy;
+            }
+            #deuRuim{
+                font-size: 18px;
+                color:white;
+                font-family:'Times New Roman';
+            }
+            #clt{
+                visibility: hidden;
+            }
+            #pudim{
+                visibility: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p id="pudim">
+        Era pra ser um site de pudim
+    </p>
+    <p id="clt">Mas preciso de emprego</p>
+    <p id="deuRuim">Meu código não saiu como previsto</p>
+    
+</body>
+</html>

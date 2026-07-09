@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>aplicação do Flex</title>
+
+    <style>
+        *{
+            font-family: arial;
+        }
+        header{
+            color: white;
+            background-color: black;
+            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .produtos{
+            width: auto;
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .card{
+            height: 100px;
+            width: 90px;
+            padding: 100px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: white;
+            margin: 10px;
+            margin-bottom: 30px;
+            box-shadow: 20px 20px 20px gray;
+        
+        }
+        .card:hover{
+            background-image: linear-gradient(blue,black);
+            color:aquamarine;
+            width: 120px;
+            height: 120px
+        }
+        a{
+            color:white;
+            text-decoration: none;
+            position: relative;
+            right: 0px;
+            padding: 10px;
+            margin-top: 50px;
+        }
+        nav{
+            position: static;
+            right: 0px;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        h2{
+            color:green;
+            font-size: 18px;
+            
+        }
+        button{
+            background-color: rgb(7, 120, 158);
+            color: white;
+            height: 100px;
+            box-shadow: 5px 5px black;
+        }
+        button:hover{
+            background-color: black;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        button:focus{
+            box-shadow: 0px 0px;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="margin: 0px; background-color: rgb(214, 205, 205);">
+    <header>
+        <h1>ADS INFORMÁTICA</h1>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Produtos</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        
+        <div class="produtos">
+
+            <!-- Produto 1 -->
+            <div class="card">
+                <img src="https://fujiokadistribuidor.vteximg.com.br/arquivos/ids/315674" alt="Produto"
+                >
+                <h2>Intel Core I 5</h2>
+                <p class="preco">R$ 49,90</p>
+                <button>Comprar</button>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.Ag12Ji2Xz7t8CNkTLBNBvQHaJQ?w=148&h=185&c=7&r=0&o=7&pid=1.7&rm=3" alt="Produto">
+                <h2>Produto 2</h2>
+                <p class="preco">R$ 79,90</p>
+                <button>Comprar</button>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.bQE3-OtFb0UfrKdXLvlBygHaHY?w=169&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Produto">
+                <h2>Produto 3</h2>
+                <p class="preco">R$ 99,90</p>
+                <button>Comprar</button>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.3TkzG66bN4799llfKy6HuQHaFC?w=268&h=183&c=7&r=0&o=7&pid=1.7&rm=3" alt="Produto">
+                <h2>Produto 4</h2>
+                <p class="preco">R$ 59,90</p>
+                <button>Comprar</button>
+            </div>
+
+            <!-- Produto 5 -->
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.QbbYChCyYbbG_khK_FXvGgHaHa?w=178&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Produto">
+                <h2>Produto 5</h2>
+                <p class="preco">R$ 39,90</p>
+                <button>Comprar</button>
+            </div>
+
+            <!-- Produto 6 -->
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.ad8BU9L6OB2X512n1TR1ngHaJ4?w=128&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Produto">
+                <h2>Produto 6</h2>
+                <p class="preco">R$ 89,90</p>
+                <button>Comprar</button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>&copy 2026 - ADS Store</footer>
+</body>
+</html>

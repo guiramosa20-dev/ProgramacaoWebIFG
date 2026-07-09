@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula sobre tabelas</title>
+    <style>
+        table,td,th{
+            border: 1px solid;
+            text-align: center;
+            vertical-align: middle;
+        }
+        table{
+            border-collapse: collapse;
+            width: auto;
+            border-bottom: 1px solid #ddd;
+        }
+        th, td{
+            padding: 10px;
+            
+            /*height: px Só pra saber que esse programa existe*/
+        }
+        td:hover, th:hover{
+            background-color: red;
+            cursor: pointer;
+            font-family: "Times New Roman";
+            font-size: 40px
+        }
+    </style>
+</head>
+<body>
+    <table width="70%" border="1" align="center">
+        <tr bgcolor="green">
+            <td>Linha 1/ coluna 1</td>
+            <td>Linha 1/ coluna 2</td>
+        </tr>
+        <tr>
+            <td>linha 2/ coluna 1</td>
+            <td bgcolor="pink">linha 2/ coluna 2</td>
+        </tr>
+    </table>
+
+    <hr>
+    <table width="200px" align="center" border="1">
+        <tr bgcolor="lightblue">
+            <th>PRODUTOS</th>
+            <th>VALOR</th>
+        </tr>
+
+        <tr>
+            <td>Arroz</td>
+            <td>R$30,00</td>
+        </tr>
+        <tr>
+            <td>Feijão</td>
+            <td>R$10,00</td>
+        </tr>
+        <tr>
+            <td>Milho</td>
+            <td>R$5,00</td>
+        </tr>
+        <tr>
+            <td>Café</td>
+            <td>R$70,00</td>
+        </tr>
+        <tr bgcolor="gold">
+            <th>Total</th>
+            <th>R$115,00</th>
+        </tr>
+    </table>
+
+    <hr>
+    <table border="1" width="70%" align="center">
+        <tr>
+            <th>Produto</th>
+            <th>valor</th>
+        </tr>
+        <tr>
+            <td>TV</td>
+            <td rowspan="2">Eletro</td>
+        </tr>
+        <tr>
+            <td>Microondas</td>
+        </tr>
+        <tr>
+            <td>Toalha</td>
+            <td rowspan="2">Mesa e banho</td>
+        </tr>
+        <tr>
+            <td>Travesseiro</td>
+        </tr>
+        <tr align="center">
+            <td colspan="2">Valores Especiais</td>
+            
+        </tr>
+
+    </table>
+    <hr>
+    <table border="1" width="50%" align="center">
+        <tr align="center">
+            <th>Frutas</th>
+            <th>Verduras</th>
+            <th>Grãos</th>
+            <th>...</th>
+        </tr>
+        <tr>
+            <td>Maça</td>
+            <td>Alface</td>
+            <td>Arroz</td>
+            <td rowspan="3">3 linhas</td>
+        </tr>
+        <tr>
+            <td>Laranja</td>
+            <td>Beterraba</td>
+            <td>Trigo</td>
+        </tr>
+        <tr>
+            <td colspan="3">3 colunas</td>
+        </tr>
+    </table>
+    
+    <hr>
+    <table border="1" width="50%" align="center">
+        <tr>
+            <th>Marca:</th>
+            <th>Modelo:</th>
+            <th>Ano:</th>
+            <th>Valor:</th>
+        </tr>
+        <tr>
+            <td>Volkswagen</td>
+            <td>Golf</td>
+            <td>2009</td>
+            <td>R$38.500</td>
+        </tr>
+        <tr>
+            <td>Fiat</td>
+            <td>Palio</td>
+            <td>2010</td>
+            <td>R$19.700</td>
+        </tr>
+        <tr>
+            <td>Honda</td>
+            <td>Civic</td>
+            <td>2012</td>
+            <td>R$61.500</td>
+        </tr>
+        <tr>
+            <td colspan="4">O melhor preço da região</td>
+        </tr>
+    </table>
+    <hr>
+    <table border="1" width="50%" align="center">
+        <tr>
+            <th>ID</th>
+            <th>Country</th>
+            <th>Animals</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td rowspan="4">1</td>
+            <td rowspan="4">Italy</td>
+            <td>dog1</td>
+            <td>Baley</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>dog2</td>
+            <td>Charly</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>cat1</td>
+            <td>Luna</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>cat2</td>
+            <td>biscut</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td rowspan="5">4</td>
+            <td rowspan="5">France</td>
+            <td>cat1</td>
+            <td>Chloe</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>cat2</td>
+            <td>Jasper</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>mouse1</td>
+            <td>Skitties</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>mouse2</td>
+            <td>Indy</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            td
+        </tr>
+    </table>
+    <hr>
+    <table border="1" width="60%" align="center">
+        <tr>
+            <th rowspan="3">Day</th>
+            <th colspan="3">Seminar</th>
+        </tr>
+        <tr>
+            <th colspan="2">Schedule</th>
+            <th rowspan="2">Topic</th>
+        </tr>
+        <tr>
+            <th>Begin</th>
+            <th>End</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Monday</td>
+            <td rowspan="2" bgcolor="gold">8:00 a.m.</td>
+            <td rowspan="2" bgcolor="lightblue">5:00 p.m.</td>
+            <td>Introduction to XML</td>
+        </tr>
+        <tr>
+            <td>Validity: DTD and Relax NG</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Tuesday</td>
+            <td bgcolor="gold">8:00 a.m.</td>
+            <td bgcolor="gold">11 a.m.</td>
+            <td>XPath</td>
+        </tr>
+            <td bgcolor="gold">11:00 a.m.</td>
+            <td bgcolor="gree">2:00 p.m.</td>
+            <td rowspan="2">XLS transformations</td>
+        </tr>
+        <tr>
+            <td bgcolor="gree">2:00 p.m.</td>
+            <td bgcolor="lightblue">5:00 p.m.</td>
+        </tr>
+        <tr>
+            <td>Wendnesday</td>
+            <td bgcolor="gold">8:00 a.m.</td>
+            <td bgcolor="gree">12:00 a.m.</td>
+            <td>XML Formatting Objects</td>
+        </tr>
+    </table>
+</body>
+</html>

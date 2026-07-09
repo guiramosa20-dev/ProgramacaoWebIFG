@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Display flex</title>
+    <style>
+        /*Fonte para essa aula: https://origamid.com/projetos/flexbox-guia-completo/*/
+        .container{
+            display: flex;
+            flex-direction: column-reverse;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;/*comentar o height do .item para o stretch funcionar*/
+            width: 500px;
+            height: 500px;
+            color:white;
+            background: linear-gradient(to right,green,gold,navy);
+        }
+        .item{
+            width:80px;
+            height:80px;
+            background-color: brown;
+            border-radius: 50%;
+            box-shadow: inset 10px 10px 10px grey, inset -10px -10px 10px grey, 10px 10px 10px rgb(75, 74, 74);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item" style="display: flex; align-self: flex-end;">8</div>
+    </div>
+</body>
+</html>
