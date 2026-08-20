@@ -5,6 +5,13 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+body{
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
 /*Variáveis*/
 :root{
     --cor_fundo: #453ED9;
@@ -23,7 +30,7 @@ header{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 20px 180px 20px 160px;
+    padding: 20px;
     width: 100%;
 }
  nav ul{/*menu c/ links para outras partes do site*/
@@ -55,12 +62,12 @@ nav a:hover{
     
 }
 nav #hamburger{
-    display: none;
+    opacity: 100%;
 }
 main{
     width: 100%;
     height: 500px;
-    padding: 20px 180px 20px 160px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,7 +128,7 @@ main{
             justify-content: center;
             flex-direction: column;
             background-color: white;
-            margin: 10px;
+            
             margin-bottom: 30px;
             box-shadow: 5px 5px 20px #E1E1E3,
                         -5px -5px 20px #E1E1E3;
@@ -160,19 +167,21 @@ footer{
     height: 10px;
 }
 
-@media (max-width: 500px){
+@media (max-width: 400px){
     /*Configurações gerais*/
     *{
-        margin: 0;
+        margin-left: 0;
         padding: 0;
         box-sizing: border-box;
         font-family: sans-serif;
+        box-sizing: border-box;
     }
     body{
-        min-height: 100vh;
+        max-height: 2000px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: white;
     }
     /*Variáveis*/
     :root{
@@ -193,6 +202,8 @@ footer{
         justify-content: center;
         align-items: center;
         width: 100vh;
+        margin-left: 0px;
+        margin-right: 0px;
     }
     nav ul{
         display: none;
@@ -203,19 +214,24 @@ footer{
     }
     /*Parte de cima do código com a logo e o menu*/
     #nome{
-         width: 50%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        margin-left: 0px;
+        margin-right: 0px;
         
     }
     main{
         width: 100vh;
-        height: 500px;
+        height: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 200px; 
+        margin-top: 200px;
+        margin-left: 0px;
+        margin-right: 0px;
+        background-color: white;
+        padding: 200px;
 
     }
     #informacao{
@@ -270,6 +286,11 @@ footer{
                 text-align: left;
                 transition: var(--transicao_padrao);
                 font-family: var(--fonte_pequena);
+                padding: 16px;
+                border-radius: 8px;
+                font-weight: bold;
+                margin-right: 0px;
+                margin-left: 0px;
             }
     .card:hover{
         transform: translateY(10px);
@@ -301,5 +322,7 @@ footer{
         margin-top: 100px;
         width: 100vh;
         height: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
