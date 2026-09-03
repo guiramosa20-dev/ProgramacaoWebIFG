@@ -1,0 +1,12 @@
+         
+  
+  ###### tabela alunos #####
+  
+  create table alunos (
+    id int AUTO_INCREMENT PRIMARY KEY,
+    nome varchar(30),
+    telefone varchar(30)
+)
+
+ create table curso ( cod int AUTO_INCREMENT PRIMARY KEY, nome varchar(30), duracao int);
+          

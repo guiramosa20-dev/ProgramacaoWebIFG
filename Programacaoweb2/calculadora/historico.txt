@@ -1,4 +1,11 @@
-Operação: soma ; N1: 1 ; N2: 1 ; Resultado: 2 
-Operação: soma ; N1: 1 ; N2: 1 ; Resultado: 2 
 soma;1;1;2
-multiplicacao;2;1;2
+subtracao;2;1;1
+multiplicacao;3;6;18
+multiplicacao;3;6;18
+multiplicacao;3;6;18
+multiplicacao;3;6;18
+multiplicacao;3;6;18
+multiplicacao;3;6;18
+multiplicacao;3;6;18
+soma;1;1;2
+divisao;23;2;11.5
