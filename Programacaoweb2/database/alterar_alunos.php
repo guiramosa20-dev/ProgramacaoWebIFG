@@ -5,11 +5,31 @@ if(isset($_POST['btn'])){
     $nome = $_POST['nome'];
     $cidade = $_POST['cidade'];
     $telefone = $_POST['telefone'];
-    
-    $ald = $conexao->prepare("update alunos set nome=:n, cidade=:c, telefone=:t where cod = '$cod'");
+
+    $stmt = $conexao->prepare("select Imagem from alunos where cod ='$cod'");
+    $stmt->execute( );
+    $usuario = $stmt->fetch();
+    $imagemAntiga = $usuario['Imagem'];
+    $novaImagem = $imagemAntiga;
+
+    if (isset($_FILES['selfie']) && $_FILES['selfie']['error'] == 0) {
+        $pastaDestino = "img/";
+        
+        }
+
+    //cadastrando imagem
+    $temp = $_FILES['selfie']['tmp_name'];
+    $novaImagem = uniqid().".jpg";
+    move_uploaded_file($temp, $pastaDestino.$novaImagem);
+        if (!empty($imagemAntiga) && file_exists($pastaDestino . $imagemAntiga)) {
+            unlink($pastaDestino . $imagemAntiga);
+        }
+
+    $ald = $conexao->prepare("update alunos set nome=:n, cidade=:c, telefone=:t, Imagem=:i where cod = '$cod'");
     $ald->bindvalue(":n", $nome);
     $ald->bindvalue(":c", $cidade);
     $ald->bindvalue(":t", $telefone);
+    $ald->bindvalue(":i", $novaImagem);
     $ald->execute();
     echo "<a href='cadastro_alunos.php'>[Voltar p/ o cadastro]</a>";
 }
@@ -28,6 +48,10 @@ if(isset($_POST['btn'])){
         <form action="" method="POST" enctype="multipart/form-data">
             <p>
                 <input type="text" name="id" value="<?php echo $_GET['id']?>" readonly hidden>
+            </p>
+            <p>
+                <label for="selfie">Foto:</label>
+                <input type="file" name="selfie" value="<?php echo $_GET['img']?>">
             </p>
             <p>
                 <label for="nome">Nome:</label>
