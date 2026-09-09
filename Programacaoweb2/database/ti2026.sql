@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03/09/2026 às 01:19
--- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.0.30
+-- Generation Time: Sep 09, 2026 at 09:34 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `ti2026`
+-- Database: `ti2026`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `alunos`
+-- Table structure for table `alunos`
 --
 
 CREATE TABLE `alunos` (
@@ -36,21 +36,20 @@ CREATE TABLE `alunos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `alunos`
+-- Dumping data for table `alunos`
 --
 
 INSERT INTO `alunos` (`cod`, `nome`, `telefone`, `cidade`, `Imagem`) VALUES
-(1, 'Souzones', '35664645646', 'Passo Fundo', NULL),
-(2, 'Hugo', '234906', 'Tailandia do Para', NULL),
-(3, 'Gustavo Guanabara', '5489358934589', 'Rio de Janeiro - RJ', NULL),
-(4, 'Delicione', '59086749', 'Uruaçu', NULL),
-(6, 'Iberê Tenório', '69696969696969696', 'São Paulo', NULL),
-(7, 'Cleiton Rasta', '4453654456745', 'Maceió', '6a98ab6fbe712.jpg');
+(2, 'Hugo', '234906', 'Tailândia do Para', '6a99798bce45a.jpg'),
+(3, 'Gustavo Guanabara', '5489358934589', 'Rio de Janeiro - RJ', '6a9979b72bc06.jpg'),
+(4, 'Saber', '2004', 'Fuyuki', '6a997a80622f3.jpg'),
+(7, 'Cleiton Rasta', '4453654456745', 'Maceió', '6a997aadbc9e0.jpg'),
+(8, 'Iberê tenório', '456487956456', 'São Paulo', '6a997cbc53707.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `curso`
+-- Table structure for table `curso`
 --
 
 CREATE TABLE `curso` (
@@ -60,7 +59,7 @@ CREATE TABLE `curso` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `curso`
+-- Dumping data for table `curso`
 --
 
 INSERT INTO `curso` (`cod`, `nome`, `duracao`) VALUES
@@ -74,33 +73,33 @@ INSERT INTO `curso` (`cod`, `nome`, `duracao`) VALUES
 (8, 'Física teorica', 14);
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices de tabela `alunos`
+-- Indexes for table `alunos`
 --
 ALTER TABLE `alunos`
   ADD PRIMARY KEY (`cod`);
 
 --
--- Índices de tabela `curso`
+-- Indexes for table `curso`
 --
 ALTER TABLE `curso`
   ADD PRIMARY KEY (`cod`);
 
 --
--- AUTO_INCREMENT para tabelas despejadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `alunos`
+-- AUTO_INCREMENT for table `alunos`
 --
 ALTER TABLE `alunos`
-  MODIFY `cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT de tabela `curso`
+-- AUTO_INCREMENT for table `curso`
 --
 ALTER TABLE `curso`
   MODIFY `cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
