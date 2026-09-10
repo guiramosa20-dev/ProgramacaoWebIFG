@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 09, 2026 at 09:34 PM
+-- Generation Time: Sep 10, 2026 at 02:10 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -72,6 +72,29 @@ INSERT INTO `curso` (`cod`, `nome`, `duracao`) VALUES
 (7, 'Cu de curioso', 12),
 (8, 'Física teorica', 14);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `usuario` varchar(100) NOT NULL,
+  `senha` varchar(255) NOT NULL,
+  `dia` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nome`, `usuario`, `senha`, `dia`) VALUES
+(1, 'Guilherme Ramos', 'guiDoGrau', 'ass', '2026-09-09'),
+(2, 'Artoria', 'Saber', '$2y$10$nPpI6JnZCWaMnXhgJMg.8ORjB6rKj0FgINsZr7mXZe7Ck47hG7ume', '2026-09-10'),
+(4, 'Iberê tenório', 'Manual do Mundo', '$2y$10$ADADPOZNsfexjPrGr1wZ.OllbWuiN3bt95geX.6qjsszFOu6g8TU6', '2026-09-10');
+
 --
 -- Indexes for dumped tables
 --
@@ -89,6 +112,12 @@ ALTER TABLE `curso`
   ADD PRIMARY KEY (`cod`);
 
 --
+-- Indexes for table `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -103,6 +132,12 @@ ALTER TABLE `alunos`
 --
 ALTER TABLE `curso`
   MODIFY `cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
