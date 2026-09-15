@@ -9,18 +9,20 @@
         if ($_POST['senha'] == $_POST['senha2']){
             $senha = $_POST['senha'];
             $cripto = password_hash($senha, PASSWORD_DEFAULT);
-        }
-        //data
-        date_default_timezone_set('America/Sao_Paulo');
-        $dataCriacao = date('Y-m-d');
+            
+            //data
+            date_default_timezone_set('America/Sao_Paulo');
+            $dataCriacao = date('Y-m-d');
 
-        //cadastrando na database
-        $cad = $conexao->prepare("insert into usuarios (nome, usuario, senha, dia) values(:n, :u, :s, :d)");
-        $cad->bindvalue(':n',$nome);
-        $cad->bindvalue(':u',$usuario);
-        $cad->bindvalue(':s',$cripto);
-        $cad->bindvalue(':d',$dataCriacao);
-        $cad->execute();
+            //cadastrando na database
+            $cad = $conexao->prepare("insert into usuarios (nome, usuario, senha, dia) values(:n, :u, :s, :d)");
+            $cad->bindvalue(':n',$nome);
+            $cad->bindvalue(':u',$usuario);
+            $cad->bindvalue(':s',$cripto);
+            $cad->bindvalue(':d',$dataCriacao);
+            $cad->execute();
+        }
+        
     }
 ?>
 <html lang="pt-br">
@@ -51,11 +53,11 @@
             </p>
             <p>
                 <label for="senha">Senha:</label>
-                <input type="password" name="senha">
+                <input type="password" name="senha" required>
             </p>
             <p>
                 <label for="senha2">Confirme a senha:</label>
-                <input type="password" name="senha2">
+                <input type="password" name="senha2" required>
             </p>
             <p>
                 <input type="submit" value="Cadastrar" name="btn">
