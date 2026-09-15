@@ -4,15 +4,18 @@
     if (isset($_POST['btn'])){
         $usuario = $_POST['user'];
         $senha = $_POST['senha'];
-        $buscar = $conexao->prepare("select * from usuarios where usuario = '$usuario'");
+        $buscar = $conexao->prepare("select * from usuarios where usuario = :u");
+        $buscar->bindValue(':u', $usuario);
         $buscar->execute();
 
         if ($buscar->rowCount() > 0){
             $dados = $buscar->fetch(PDO::FETCH_ASSOC);
-            if (password_verify($senha, $dados['senha'])){
+            $senha_db = $dados['senha'];
+            if (password_verify($senha, $senha_db)){
                 $_SESSION['logado'] = true;
                 $_SESSION['nome'] = $dados['usuario'];
                 header("location: home2.php");
+                exit;
             }else{
                 echo "Senha incorreta!";
             }
@@ -44,7 +47,7 @@
                 <input type="password" name="senha" required>
             </p>
             <p>
-                <input type="submit" nome="btn">
+                <input type="submit" name="btn" value="Entrar">
             </p>
         </form>
     </fieldset>

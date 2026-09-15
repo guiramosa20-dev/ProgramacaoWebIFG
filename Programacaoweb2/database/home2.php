@@ -17,7 +17,7 @@ if (isset($_SESSION['logado'])){
 </body>
 </html>
 <?php
-    }else{
-        header("location: login_usuario.php");
-    }
+} else {
+    header("location: login_usuario.php");
+}
 ?>
