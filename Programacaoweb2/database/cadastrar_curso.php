@@ -42,30 +42,13 @@ if (isset($_POST['btn'])){
 </html>
 
 <?php
-session_start();
-$_SESSION['logado'] = true;
     //listar no db
     require 'conexao.php';
     $listar = $conexao->prepare("select * from cursos");
     $listar->execute();
     $x = $listar->fetchAll(PDO::FETCH_OBJ);
-
-    echo "<table border='1'><tr><th>Nome</th>
-        <th>Duração</th>
-        <th>Ano de criação</th>
-        <th>Ações</th>
-        </tr>";
     foreach($x as $curso){
-        echo "<tr>
-        <td> $curso->nome </td>
-        <td> $curso->duracao </td>
-        <td> $curso->ano </td>
-        <td>
-            <a href='alterar_curso.php?id=$curso->id&nome=$curso->nome&duracao=$curso->duracao'
-            onclick=\"return confirm('Tem certeza de que deseja alterar?');return false;\">[ALTERAR]</a>
-            <a href='excluir_curso.php?id=$curso->id&nome=$curso->nome'
-            onclick=\"return confirm('Tem certeza de que deseja excluir?');return false;\">[EXCLUIR]</a>
-        </td>
-        </tr>";
+        echo "<b>Curso: </b> $curso->nome <br><b>Duração: </b> $curso->duracao <br><b>Ano de criação: </b> $curso->ano <br><br><a href='alterar_curso.php?id=$curso->id&nome=$curso->nome&duracao=$curso->duracao'
+        onclick=\"return confirm('Tem certeza de que deseja alterar?');return false;\">[ALTERAR]</a><br><hr>";
     }
 ?>

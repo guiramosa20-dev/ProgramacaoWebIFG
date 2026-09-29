@@ -1,20 +1,15 @@
 <?php
-session_start();
-if(isset($_SESSION['logado']) && $_SESSION['logado'] == true){
-    require "conexao.php";
 if(isset($_POST['btn'])){
     $id = $_POST['id'];
     $novoNome = $_POST['nome'];
     $novaDuracao = $_POST['duracao'];
 
     require "conexao.php";
-    $pstmt = $conexao->prepare('update cursos set nome = :n, duracao = :d where id = :i');
+    $pstmt = $conexao('update cursos set nome = :n, duracao = :d where id = :i');
     $pstmt->bindvalue(':i', $id);
     $pstmt->bindvalue(':n', $novoNome);
     $pstmt->bindvalue(':d', $novaDuracao);
-    $pstmt->execute();
-    echo "<a href='cadastrar_curso.php'>[Voltar p/ o cadastro]</a><br>";
-    echo "<a href='home.php'>[Voltar p/ home]</a>";
+    $pstnt->execute();
 }
 ?>
 
@@ -23,7 +18,7 @@ if(isset($_POST['btn'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alteração de cursos</title>
+    <title>Cadastro de cursos</title>
 </head>
 <body>
     <fieldset>
@@ -41,15 +36,9 @@ if(isset($_POST['btn'])){
                 <input type="number" name="duracao" value="<?php echo $_GET['duracao']?>">
             </p>
             <p>
-                <input type="submit" value="Alterar" name="btn">
+                <input type="submit" value="Cadastrar" name="btn">
             </p>
         </form>
     </fieldset>
 </body>
 </html>
-
-<?php
-} else{
-    header("Location: cadastrar_curso.php");
-}
-?>
