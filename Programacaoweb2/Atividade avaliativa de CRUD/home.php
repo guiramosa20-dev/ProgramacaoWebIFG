@@ -15,6 +15,7 @@ echo "Bem-vindo à página inicial!";
         <li><a href="cadastro_alunos.php">Alunos</a></li>
         <li><a href="cadastrar_curso.php">Cursos</a></li>
         <li><a href="cadastro_matricula.php">Matrículas</a></li>
+        <li><a href="cadastro_disciplina.php">Disciplinas</a></li>
     </ul>
 </body>
 </html>

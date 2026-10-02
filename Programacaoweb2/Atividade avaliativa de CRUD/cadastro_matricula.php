@@ -85,7 +85,8 @@
         </tr>";
     foreach($x as $matricula){
         echo "<tr><td><img src='img/$matricula->Imagem' width='50px' height='50px'></td><td>$matricula->aluno_nome</td><td>$matricula->curso_nome</td><td>$matricula->data_matricula</td>
-        <td><a href='excluir_matricula.php?id=$matricula->id&aluno=$matricula->aluno_nome&curso=$matricula->curso_nome' onclick=\"return confirm('Tem certeza de que deseja excluir?');return false;\"> [EXCLUIR] </a></td>
+        <td><a href='excluir_matricula.php?id=$matricula->id&aluno=$matricula->aluno_nome&curso=$matricula->curso_nome' onclick=\"return confirm('Tem certeza de que deseja excluir?');return false;\"> [EXCLUIR] </a> 
+        <a href='alterar_matricula.php?id=$matricula->id&aluno=$matricula->aluno_nome&curso=$matricula->curso_nome' onclick=\"return confirm('Tem certeza de que deseja alterar?');return false;\"> [ALTERAR] </a></td>
         </tr>";
     }
 ?>
