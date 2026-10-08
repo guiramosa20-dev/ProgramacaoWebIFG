@@ -17,6 +17,7 @@ echo "Bem-vindo à página inicial!";
         <li><a href="cadastro_matricula.php">Matrículas</a></li>
         <li><a href="cadastro_disciplina.php">Disciplinas</a></li>
         <li><a href="associa_disciplina_materia.php">Associação de disciplina a um curso</a></li>
+        <li><a href="cadastro_de_notas.php">Cadastro de Notas</a></li>
     </ul>
 </body>
 </html>
