@@ -41,6 +41,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Notas</title>
+
+    <style>
+        img{
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body>
     <fieldset>
@@ -80,3 +86,25 @@
     </fieldset>
 </body>
 </html>
+
+<?php
+require 'conexao.php';
+$listar = $conexao->prepare('select m.media, a.Imagem, a.nome as aluno from medias m inner join alunos a on m.aluno_id = a.cod');
+$listar->execute();
+$x = $listar->fetchAll(PDO::FETCH_OBJ);
+
+echo "<table border='1'><tr><th>Imagem</th>
+        <th>Nome</th>
+        <th>média</th>
+        </tr>";
+
+foreach($x as $media){
+        //mostrando os resultados e a opção de alterar e excluir
+        echo " 
+        <tr>
+        <td><img src=img/$media->Imagem width=50px height=50px></td>
+        <td>$media->aluno</td>
+        <td>$media->media</td>
+        </tr>";
+}
+?>
