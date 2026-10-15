@@ -77,7 +77,7 @@
                     foreach ($alunos as $aluno) {
                         echo "<option value='{$aluno['cod']}'>{$aluno['nome']}</option>";
                     }
-                ?>
+                ?>e
             </select>
             <label for="nota">Nota</label>
             <input type="number" name="nota" id="nota" min="0" max="10" step="0.1">
@@ -89,13 +89,14 @@
 
 <?php
 require 'conexao.php';
-$listar = $conexao->prepare('select m.media, a.Imagem, a.nome as aluno from medias m inner join alunos a on m.aluno_id = a.cod');
+$listar = $conexao->prepare('select m.media, m.aluno_id, m.disciplina_id, a.Imagem, a.nome as aluno, d.nome as disciplina from medias m inner join alunos a on m.aluno_id = a.cod inner join disciplinas d on m.disciplina_id = d.id');
 $listar->execute();
 $x = $listar->fetchAll(PDO::FETCH_OBJ);
 
 echo "<table border='1'><tr><th>Imagem</th>
         <th>Nome</th>
         <th>média</th>
+        <th>disciplina</th>
         </tr>";
 
 foreach($x as $media){
@@ -105,6 +106,11 @@ foreach($x as $media){
         <td><img src=img/$media->Imagem width=50px height=50px></td>
         <td>$media->aluno</td>
         <td>$media->media</td>
+        <td>$media->disciplina</td>
+
+        <td><a href='mostrar_notas_aluno.php?id=$media->aluno_id&nome=" . urlencode($media->aluno) . "&disciplina=$media->disciplina'> [acessar notas do aluno] </a><td>
+        <td><a href='acessar_notas_disciplina.php?id_disciplina=$media->disciplina_id&disciplina=$media->disciplina'> [acessar notas da disciplina] </a><td>
         </tr>";
 }
+echo "<a href='listar_disciplinas_baixo_media.php'>[Listar disciplinas com média abaixo de 6] </a>"
 ?>
