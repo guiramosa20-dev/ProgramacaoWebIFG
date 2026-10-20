@@ -8,6 +8,7 @@
     $pstmt->execute();
     $notas = $pstmt->fetchAll(PDO::FETCH_OBJ);
 
+    echo "<link rel='stylesheet' href='estilo.css'>";
     echo "<h2>Relatório de notas da disciplina: $nome_disciplina</h2>";
 
     echo "<table border='1'><tr>

@@ -6,6 +6,7 @@
         $pstmt = $conexao->prepare('delete from disciplinas where id = :i');
         $pstmt->bindvalue(':i', $id);
         $pstmt->execute();
+        echo "<link rel='stylesheet' href='estilo.css'>";
         echo "Disciplina excluída com sucesso!<br>";
         echo "<a href='cadastro_disciplina.php'>[Voltar p/ o cadastro] </a><br>";
         echo "<a href='home.php'>[Voltar p/ home]</a>";

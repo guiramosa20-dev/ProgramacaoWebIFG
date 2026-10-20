@@ -7,6 +7,7 @@ $pstmt = $conexao->prepare("select n.nota, d.nome as disciplina from notas n inn
 $pstmt->bindvalue(':a', $aluno);
 $pstmt->execute();
 $n = $pstmt->fetchAll(PDO::FETCH_OBJ);
+echo "<link rel='stylesheet' href='estilo.css'>";
 echo "<h2>Relatório de notas do aluno(a): $nome_aluno</h2>
         <h3>Disciplina: {$_GET['disciplina']}</h3>
         ";
