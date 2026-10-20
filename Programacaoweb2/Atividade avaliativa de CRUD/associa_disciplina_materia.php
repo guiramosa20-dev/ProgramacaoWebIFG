@@ -18,6 +18,7 @@ if (isset($_POST['btn'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de disciplina a um curso</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <fieldset>

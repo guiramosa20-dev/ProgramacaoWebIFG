@@ -25,12 +25,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Alunos</title>
-<style>
-    img{
-        border-radius: 50%;
-        background-position:center;
-    }
-</style>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        img{
+            border-radius: 50%;
+            background-position:center;
+        }
+    </style>
 </head>
 <body>
     <fieldset>

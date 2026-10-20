@@ -1,0 +1,258 @@
+/* ===================================================
+   ESTILO GLOBAL E PADRONIZAÇÃO (ESTILO ANOS 2000)
+   =================================================== */
+
+/* Fontes padrão da época */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  font-size: 14px;
+  background-color: #d4d0c8; /* Tom clássico de cinza estilo Windows 98/2000 */
+  color: #000000;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+/* Container central para manter todas as páginas alinhadas */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 2px solid #000080; /* Azul escuro clássico */
+  box-shadow: 4px 4px 0px #808080; /* Sombra sólida sem desfoque */
+  padding: 15px;
+}
+
+/* ===================================================
+   CABEÇALHO E NAVEGAÇÃO
+   =================================================== */
+
+header {
+  background: linear-gradient(to bottom, #000080, #1084d0); /* Gradiente azul estilo Windows XP/2000 */
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 2px solid #000000;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 24px;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+/* Menu de navegação superior */
+nav {
+  background-color: #e0e0e0;
+  border: 1px solid #7f7f7f;
+  padding: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: #0000ff;
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  color: #ff0000;
+  background-color: #ffff00; /* Destaque amarelo ao passar o mouse */
+}
+
+/* ===================================================
+   CONTEÚDO PRINCIPAL E SEÇÕES
+   =================================================== */
+
+main {
+  margin-bottom: 20px;
+}
+
+section {
+  border: 1px solid #b0b0b0;
+  background-color: #f9f9f9;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 18px;
+  color: #000080;
+  border-bottom: 1px dashed #000080;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* Links do corpo da página */
+a {
+  color: #0000ff;
+}
+
+a:visited {
+  color: #800080; /* Roxo clássico para links visitados */
+}
+
+/* ===================================================
+   BOTÕES E FORMULÁRIOS (Efeito 3D / Bevel)
+   =================================================== */
+
+button, input[type="submit"], .btn {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #d4d0c8;
+  color: #000000;
+  padding: 5px 12px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  cursor: pointer;
+}
+
+button:active, input[type="submit"]:active {
+  border-top: 2px solid #404040;
+  border-left: 2px solid #404040;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+input[type="text"], textarea {
+  border: 2px inset #7f7f7f;
+  padding: 4px;
+  background-color: #ffffff;
+}
+
+/* ===================================================
+   RODAPÉ
+   =================================================== */
+
+footer {
+  text-align: center;
+  font-size: 11px;
+  color: #555555;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+button, input[type="submit"], .btn {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #d4d0c8;
+  color: #000000;
+  padding: 5px 12px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  cursor: pointer;
+}
+
+/* ===================================================
+   ESTILIZAÇÃO DE TABELAS (ESTILO WEB 1.0 / EXCEL ANTIGO)
+   =================================================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border: 2px solid #808080; /* Borda externa grossa e cinza */
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+/* Cabeçalho da tabela com gradiente ou azul clássico */
+th {
+  background: linear-gradient(to bottom, #000080, #1084d0);
+  color: #ffffff;
+  padding: 6px 8px;
+  border: 1px solid #404040;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Células da tabela com bordas bem marcadas (grid visível) */
+td {
+  padding: 6px 8px;
+  border: 1px solid #808080;
+  color: #000000;
+}
+
+/* Efeito zebrado clássico opcional (linhas alternadas) */
+tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+tr:hover {
+  background-color: #ffffcc; /* Amarelinho clássico ao passar o mouse na linha */
+}
+
+
+/* ===================================================
+   ESTILIZAÇÃO DE FORMULÁRIOS (CAIXAS E BOTÕES 3D)
+   =================================================== */
+
+form {
+  background-color: #ece9d8; /* Fundo cinza/bege clássico de painel */
+  border: 2px groove #ffffff; /* Efeito de relevo antigo */
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+fieldset {
+  border: 1px solid #808080;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+legend {
+  font-weight: bold;
+  color: #000080;
+  background-color: #ece9d8;
+  padding: 0 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+/* Caixas de texto, selects e áreas de texto */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 4px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border-top: 2px solid #7f7f7f;
+  border-left: 2px solid #7f7f7f;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 13px;
+}
+
+/* Caixas de seleção (Checkbox e Rádio) */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 5px;
+}

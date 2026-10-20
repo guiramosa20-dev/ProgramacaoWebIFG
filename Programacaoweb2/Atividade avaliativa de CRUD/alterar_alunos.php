@@ -42,6 +42,7 @@ if(isset($_SESSION['logado']) && $_SESSION['logado'] == true){
 <head>
     <meta charset="UTF-8">
     <title>Alterar aluno</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 <fieldset>
