@@ -21,7 +21,7 @@ foreach($n as $notas){
     echo "<tr>
     <td> $notas->disciplina</td>
     <td> $notas->nota</td>
-    <td><a href='editar_nota.php?id=$notas->id&aluno=$notas->aluno&nota=$notas->nota'>[Editar]</a> |
+    <td><a href='editar_nota.php?id=$notas->id&aluno=" . urlencode($notas->aluno) . "&nota=$notas->nota'>[Editar]</a> |
      <a href='excluir_nota.php?id=$notas->id'>[Excluir]</a></td>
     </tr>";
 }

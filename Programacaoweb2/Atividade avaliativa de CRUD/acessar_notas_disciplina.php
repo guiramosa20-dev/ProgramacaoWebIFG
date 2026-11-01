@@ -22,7 +22,7 @@
         <td> $nota->aluno</td>
         <td> $nota->nota</td>
         <td> 
-        <a href='editar_nota.php?id=$nota->id&aluno=$nota->aluno&nota=$nota->nota'>[Editar]</a> |
+        <a href='editar_nota.php?id=$nota->id&aluno=" . urlencode($nota->aluno) . "&nota=$nota->nota'>[Editar]</a> |
         <a href='excluir_nota.php?id=$nota->id'>[Excluir]</a> </td>
         </tr>";
     }
