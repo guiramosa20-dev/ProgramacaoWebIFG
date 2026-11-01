@@ -134,6 +134,10 @@ input[type="text"], textarea {
   padding: 4px;
   background-color: #ffffff;
 }
+input[type="number"] {
+  width: 100px;
+  max-width: 100%;
+}
 
 /* ===================================================
    RODAPÉ

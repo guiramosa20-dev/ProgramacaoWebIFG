@@ -23,6 +23,7 @@ if (isset($_SESSION['logou']) && $_SESSION['logou'] === true) {
         <li><a href="cadastro_disciplina.php">Disciplinas</a></li>
         <li><a href="associa_disciplina_materia.php">Associação de disciplina a um curso</a></li>
         <li><a href="cadastro_de_notas.php">Cadastro de Notas</a></li>
+        <li><a href="registro_presenca.php">Registro de presenças</a></li>
         <li><a href="login.php">Trocar de usuário</a></li>
     </ul>
     <marquee behavior="scroll" direction="left" scrollamount="10">
