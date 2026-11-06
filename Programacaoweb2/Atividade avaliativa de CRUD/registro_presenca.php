@@ -67,5 +67,57 @@
             <input type="submit" value="Registrar Presença" name="btn">
         </form>
     </legend>
+        
+    </fieldset>
+    <fieldset>
+        <legend>
+        <form action="" method="post">
+            <label for="disciplina">Selecione a disciplina para visualisar as notas</label>
+            <?php
+                foreach ($disciplinas as $disciplina){
+                    echo "<input type='radio' name='disciplina' value='{$disciplina['id']}'>{$disciplina['nome']}<br>";
+                }
+            ?>
+            <input type="submit" value="Visualisar" name="visualisar">
+        </form>
+        </legend>
+    </fieldset>
+    <?php
+        if (isset($_POST['visualisar'])){
+            $disciplina = $_POST['disciplina'];
+            require 'conexao.php';
+            $pstmt = $conexao->prepare("select p.*, a.nome as aluno from presencas p inner join alunos a on p.aluno_id = a.cod where disciplinas_id = :d order by dia");
+            $pstmt->bindvalue(":d", $disciplina);
+            $pstmt->execute();
+            $presencas = $pstmt->fetchAll(PDO::FETCH_ASSOC);
+            
+            echo "<table border='1'><tr><th>dia</th>
+            <th>Aluno</th>
+            <th>Comparecimento</th></tr>";
+            foreach($presencas as $presenca){ 
+                echo "<tr><td>{$presenca['dia']}</td>
+                    <td>{$presenca['aluno']}</td>
+                    <td>{$presenca['comparecimento']}</td></tr>";           
+            }
+            
+            $contador = $conexao->prepare("Select count(distinct aluno_id) as total_alunos from presencas");
+            $contador->execute();
+            $total = $contador->fetch(PDO::FETCH_ASSOC);
+            
+            function contarFaltas($aluno, $presencas){
+                $cont = 0;
+                foreach($presencas as $presenca){
+                    if ($presenca['aluno'] == $aluno){
+                        $cont += $presenca['comparecimento'] ?? 2;
+                    }
+                }
+                return $cont;
+            }
+            echo "<table border='1'><tr><th>Aluno</th><th>Total</th></tr>";
+            for($i = 0; $i < $total['total_alunos']; $i++){
+                echo "<tr><td>{$presencas[$i]['aluno']}</td><td>" . contarFaltas($presencas[$i]['aluno'], $presencas) . "</td></tr>";
+            }
+        }
+    ?>
 </body>
 </html>
