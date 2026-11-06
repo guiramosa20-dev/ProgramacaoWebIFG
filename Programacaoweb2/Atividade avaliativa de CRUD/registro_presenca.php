@@ -113,7 +113,7 @@
                 }
                 return $cont;
             }
-            echo "<table border='1'><tr><th>Aluno</th><th>Total</th></tr>";
+            echo "<table border='1'><tr><th>Aluno</th><th>Total de faltas</th></tr>";
             for($i = 0; $i < $total['total_alunos']; $i++){
                 echo "<tr><td>{$presencas[$i]['aluno']}</td><td>" . contarFaltas($presencas[$i]['aluno'], $presencas) . "</td></tr>";
             }
