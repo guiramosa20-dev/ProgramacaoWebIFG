@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['logou']) && $_SESSION['logou'] === true) {
+if (isset($_SESSION['logou']) && $_SESSION['logou'] === true && isset($_SESSION['eh_aluno']) && $_SESSION['eh_aluno'] == false) {
     // Usuário está logado, exibir a página
 
 ?>
@@ -33,6 +33,11 @@ if (isset($_SESSION['logou']) && $_SESSION['logou'] === true) {
 </html>
 
 <?php
+} else if (isset($_SESSION['logou']) && $_SESSION['logou'] === true && $_SESSION['eh_aluno'] == true) {
+    // Usuário é um aluno, redirecionar para a página de aluno
+    header("Location: home_aluno.php");
+    exit;
+
 } else {
     // Usuário não está logado, redirecionar para a página de login
     header("Location: login.php");

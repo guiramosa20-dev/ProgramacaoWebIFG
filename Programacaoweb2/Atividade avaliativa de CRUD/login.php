@@ -1,5 +1,7 @@
 <?php
 session_start();
+$_SESSION['logou'] = false;
+$_SESSION['eh_aluno'] = false;
 if (isset($_POST['btn'])) {
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
@@ -10,11 +12,19 @@ if (isset($_POST['btn'])) {
     $pstmt->execute();
     $resultado = $pstmt->fetch(PDO::FETCH_ASSOC);
 
+    $alunos = $conexao->query("select * from alunos")->fetchAll(PDO::FETCH_ASSOC);
+
     if ($pstmt->rowCount() > 0){
             $senha_db = $resultado['senha'];
             if (password_verify($senha, $senha_db)){
                 $_SESSION['logou'] = true;
                 $_SESSION['nome'] = $resultado['usuario'];
+            foreach($alunos as $aluno){
+                if ($aluno['nome'] == $usuario){
+                    $_SESSION['eh_aluno'] = true;
+                    break;
+                }
+            }
                 header("location: home.php");
                 exit;
             }else{
