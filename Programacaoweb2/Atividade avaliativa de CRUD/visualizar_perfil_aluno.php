@@ -20,15 +20,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
     <link rel="stylesheet" href="estilo.css">
+    <style>
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Perfil do Aluno</h1>
-    <img src="img/<?php echo $aluno['Imagem']; ?>" alt="Foto do Aluno" width="200" height="200" border-radius="50px">
-    <p><strong>Nome:</strong> <?php echo $aluno['nome']; ?></p>
-    <p><strong>Telefone:</strong> <?php echo $aluno['telefone']; ?></p>
-    <p><strong>Cidade:</strong> <?php echo $aluno['cidade']; ?></p>
-    <p><strong>Curso:</strong> <?php echo $matricula['curso_nome']; ?></p>
+    <fieldset>
+        <h1>Perfil do Aluno</h1>
+        <img src="img/<?php echo $aluno['Imagem']; ?>" alt="Foto do Aluno" width="200" height="200" border-radius="50px">
+        <p><strong>Nome:</strong> <?php echo $aluno['nome']; ?></p>
+        <p><strong>Telefone:</strong> <?php echo $aluno['telefone']; ?></p>
+        <p><strong>Cidade:</strong> <?php echo $aluno['cidade']; ?></p>
+        <p><strong>Curso:</strong> <?php echo $matricula['curso_nome']; ?></p>
     <a href="home_aluno.php">[Voltar]</a>
+    </fieldset>
 
 </body>
 </html>

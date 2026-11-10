@@ -20,7 +20,7 @@ if (isset($_POST['btn'])) {
                 $_SESSION['logou'] = true;
                 $_SESSION['nome'] = $resultado['usuario'];
             foreach($alunos as $aluno){
-                if ($aluno['nome'] == $usuario){
+                if ($aluno['nome'] == $resultado['usuario']){
                     $_SESSION['eh_aluno'] = true;
                     break;
                 }
